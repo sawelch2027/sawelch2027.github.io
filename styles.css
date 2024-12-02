@@ -1,27 +1,28 @@
 body{
-  background: #fff7d2;
+  background: #D9D0C7;
   font-family:"Times New Roman", Times, serif;
   margin: 40px;
 }
 h1{
   text-align: center;
-  color: #005729;
+  color: #594A3E;
 }
 h2{
   text-align: left;
-  color: black;
+  color: #0D0B0C;
 }
 .project img{
 width: 300px;
 height: 300px;
 margin: 10px;
-border: 2px solid rgb(126, 14, 201); /* choose a color */
+border: 2px solid;
+color: #FFCC99;
 display: block;
 margin: auto;
 }
 a { /* change the appearance of ALL links */
 text-decoration: underline;
-color: #2F753A;
+color: #0D0B0C;
 }
 .project p { /* change the appearance of paragraph tags inside .project divs */
 text-align: center;
@@ -32,7 +33,7 @@ margin: 15px;
 width: 20%;
 margin: 5px;
 padding: 10px 5px;
-background: light green; /* pick a color */
+background: #BF7C63; /* pick a color */
 border-radius: 15%;
 }
 .about img {
