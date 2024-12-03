@@ -5,7 +5,13 @@ body {
 h1 {
     text-align: center;
     color:#594A3E;
+    width: 30%;
+    margin: 10px;
+    padding: 30px 10px;
+    background: rgb(191 124 99);
+    border-radius: 20%;
 }
+
 
 .projects {
     display:flex; 
