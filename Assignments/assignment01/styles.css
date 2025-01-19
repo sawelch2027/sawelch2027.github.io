@@ -1,0 +1,18 @@
+h1{color: #ff7f50;
+    font-size: xx-large;
+    font-style: Verdana;
+}
+h2{color:#d2691e;
+    font-size: larger;
+    font-style: Times;
+}
+h3{color: #d2691e;
+    font-size: large;
+    font-style: Verdana;
+
+}
+.top-border {
+    width: 100%;
+    height: 10px; 
+    background-color: rgb(114, 61, 7); 
+}
