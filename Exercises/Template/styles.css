@@ -1,0 +1,49 @@
+/* structure */
+body{
+    background-color: darkseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#content {
+    background-color: aliceblue;
+    width: 50%;
+    margin:auto; /* center*/
+    padding:5px;
+    border: 20px solid seagreen;
+    border-radius: 20px;
+    box-shadow: 20px 20px darkslategrey;
+}
+
+header, footer {
+    background-color: lightgreen;
+    padding: 10px;
+    color:black;
+}
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+    
+}
+#main-nav li {
+    list-style-type: none; /* remove bullets */
+    display: inline-block;
+}
+
+#main-nav a { /* change color for links and underlining */
+    color:darkgreen;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+#main-nav a:hover{
+    color:darkslategray;
+    border-bottom: 1px solid darkolivegreen;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+}
+footer p {
+    text-align:center;
+}
