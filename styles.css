@@ -2,3 +2,8 @@ body{
     background-color: khaki;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+#main{
+    background-color: darkkhaki;
+    width: 70%;
+    padding-left: 10px;
+}
