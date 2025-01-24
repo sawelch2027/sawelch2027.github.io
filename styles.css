@@ -9,7 +9,7 @@ body {
 
 /* Add a formatted div for better page content viewing */
 #main {
-    background-color: #ffffff; /* White background for content area */
+    background-color: lightgreen; /* White background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     max-width: 800px; /* Set a max width for the content area */
@@ -19,13 +19,13 @@ body {
 
 /* Style for the main heading */
 h1 {
-    color: #0056b3; /* A nice blue for the main heading */
+    color: rgb(113, 180, 91); /* A nice blue for the main heading */
     text-align: center; /* Center align the heading */
 }
 
 /* Style for the author name */
 em {
-    color: #555; /* Softer color for the author name */
+    color: #052107; /* Softer color for the author name */
     font-style: italic;
     display: block;
     text-align: center;
@@ -40,12 +40,12 @@ ol {
 /* Remove underline and recolor assignment links */
 ol li a {
     text-decoration: none; /* Remove underline */
-    color: #ff5722; /* Warm orange color */
+    color: #366d18; 
     font-weight: bold;
 }
 
 ol li a:hover {
-    color: #e64a19; /* Slightly darker shade on hover */
+    color: #4d7a3e; /* Slightly darker shade on hover */
 }
 
 /* Style for paragraphs */
@@ -53,10 +53,7 @@ p {
     line-height: 1.6; /* Improve readability */
 }
 
-/* Add background image (if needed) */
 body {
-    background-image: url('background.jpg'); /* Replace with your image path */
+    background-color: darkseagreen;
     background-size: cover; /* Ensure the background covers the whole screen */
-    background-attachment: fixed; /* Make the background stay in place when scrolling */
-    background-repeat: no-repeat;
 }
