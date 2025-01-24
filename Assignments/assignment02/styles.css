@@ -1,0 +1,86 @@
+
+body{
+    background-color: lightpink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h1{
+    color:rgb(161, 57, 75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    color:rgb(161, 57, 75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    color:rgb(161, 57, 75);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    color: darkred;
+}
+p a {
+    color:rgb(213, 78, 98);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+p a:hover{
+    color:rgb(213, 78, 98);
+    text-decoration: none;
+    border-bottom: 1px solid rgb(111, 53, 53);
+}
+#main {
+    background-color: aliceblue;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+    border: 20px solid lightpink;
+    border-radius: 5px;
+    box-shadow: 10px 10px palevioletred;
+}
+
+header, footer {
+    background-color: lightskyblue;
+    padding: 5px;
+    color:black;
+}
+
+#nav-nav ul{
+    padding-left: 0;
+    
+}
+#nav-nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#nav-nav a { 
+    color:rgb(213, 78, 98);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+#nav-nav a:hover{
+    color:darkred;
+    border-bottom: 1px solid lightpink;
+}
+header h1 {
+    text-align: center;
+}
+footer p {
+    text-align:center;
+}
+ul{
+    text-align: center;
+}
+ol{
+    color: darkred;
+}
+#styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgb(116, 171, 219);
+}
