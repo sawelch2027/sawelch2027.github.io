@@ -8,6 +8,10 @@ body {
     color: #333; /* Neutral text color */
 }
 
+article{
+    display: block;
+}
+
 /* Add a formatted div for better page content viewing */
 header {
     background-color: lightgreen; /* lightgreen background for content area */
@@ -50,6 +54,8 @@ header {
     margin-right: auto;
     width: 50%;
     border-radius: 10px;
+    border-style: double;
+    box-shadow: 10px 10px rgb(4, 62, 4);
 }
 /* hyperlink to assignment webpages */
 .center2 {
