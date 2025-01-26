@@ -10,7 +10,7 @@ body {
 
 /* Add a formatted div for better page content viewing */
 header {
-    background-color: lightgreen; /* White background for content area */
+    background-color: lightgreen; /* lightgreen background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     max-width: 800px; /* Set a max width for the content area */
@@ -18,7 +18,7 @@ header {
     padding: 20px; /* Add padding inside the div */
 }
 #assign1 {
-    background-color: lightgreen; /* White background for content area */
+    background-color: lightgreen; /* lightgreen background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     max-width: 800px; /* Set a max width for the content area */
@@ -28,6 +28,14 @@ header {
 
 }
 #assign2 {
+    background-color: lightgreen; /* Light green background for content area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    max-width: 800px; /* Set a max width for the content area */
+    margin: 20px auto; /* Center the content area */
+    padding: 20px; /* Add padding inside the div */
+}
+#assign3 {
     background-color: lightgreen; /* Light green background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
@@ -101,4 +109,3 @@ footer{
     margin:auto;
 }
 
-}
