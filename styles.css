@@ -8,12 +8,8 @@ body {
     color: #333; /* Neutral text color */
 }
 
-article{
-    display: block;
-}
-
 /* Add a formatted div for better page content viewing */
-header {
+header, #assign1, #assign2, #assign3, #project1, #project2 {
     background-color: lightgreen; /* lightgreen background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
@@ -21,32 +17,7 @@ header {
     margin: 20px auto; /* Center the content area */
     padding: 20px; /* Add padding inside the div */
 }
-#assign1 {
-    background-color: lightgreen; /* lightgreen background for content area */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    max-width: 800px; /* Set a max width for the content area */
-    margin: 20px auto; /* Center the content area */
-    padding: 20px; /* Add padding inside the div */
-    
 
-}
-#assign2 {
-    background-color: lightgreen; /* Light green background for content area */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    max-width: 800px; /* Set a max width for the content area */
-    margin: 20px auto; /* Center the content area */
-    padding: 20px; /* Add padding inside the div */
-}
-#assign3 {
-    background-color: lightgreen; /* Light green background for content area */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    max-width: 800px; /* Set a max width for the content area */
-    margin: 20px auto; /* Center the content area */
-    padding: 20px; /* Add padding inside the div */
-}
 /* centering the images */
 .center{
     display: block;
@@ -57,16 +28,19 @@ header {
     border-style: double;
     box-shadow: 10px 10px rgb(4, 62, 4);
 }
+
 /* hyperlink to assignment webpages */
 .center2 {
     text-align: center;
 }
+
 .center2 a{
     color: #0e2905;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
 .center2 a:hover{
     color:rgb(15, 150, 8);
     border-bottom: 1px solid darkolivegreen;
@@ -78,8 +52,8 @@ h1 {
     text-align: center; /* Center align the heading */
 }
 
-h2 {
-    text-align: center; /* Aligning "assignments" */
+h2, footer {
+    text-align: center; /* Aligning */
     border-radius: 20px;
     background-color: #4d7a3e;
     box-shadow: 0px 10px 15px black;
@@ -104,14 +78,5 @@ p {
 
 body {
     background-color: darkseagreen;
-}
-
-footer{
-    text-align: center; /* Aligning "assignments" */
-    border-radius: 20px;
-    background-color: #4d7a3e;
-    box-shadow: 0px 10px 15px black;
-    max-width: 800px;
-    margin:auto;
 }
 
