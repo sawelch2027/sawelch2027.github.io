@@ -61,6 +61,11 @@ h2, footer {
     margin:auto;
 }
 
+img{
+    height: 150;
+    width: 300;
+}
+
 /* Style for the author name */
 em {
     color: #052107; /* Softer color for the author name */
