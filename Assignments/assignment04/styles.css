@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#header {
+    background-color: #002b36; 
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+#hero {
+    background-color: #268bd2;
+    color: white;
+    padding: 5em 1em;
+    text-align: center;
+    margin-top: 60px; 
+}
+
+#middle-section {
+    padding: 2em;
+    background-color: #f5f5f5;
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 2em;
+}
+
+.section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.section {
+    background-color: #eee;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.news-section {
+    padding: 2em;
+    background-color: #f5f5f5;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+#footer {
+    background-color: #002b36; 
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
