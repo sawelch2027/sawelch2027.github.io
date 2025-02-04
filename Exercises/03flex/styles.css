@@ -1,132 +1,250 @@
-/* structure */
-body{
-    background-color: darkseagreen;
-    font-family: Arial, Helvetica, sans-serif;
-
+.navbar {
+    display: flex;
+    flex-direction: column;
 }
-#content {
-    background-color: aliceblue;
-    width: 50%;
+
+/* Media query for large screens - horizontal navbar */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center; /* Optional: centers navbar items horizontally */
+    }
+
+    .navbar a {
+        margin: 0 10px; /* Optional: space out the items */
+    }
+}
+/* is used to group colors */
+:root{
+--main-background-color: cyan; 
+--primary-color:darkgreen;
+}
+
+body{
+    background:var(--main-background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: darkslateblue;
+}
+h2{
+    color:darkslateblue;
+}
+
+#content{
     margin:auto; /* center*/
     padding:5px;
-    border: 20px solid seagreen;
-    border-radius: 20px;
-    box-shadow: 20px 20px darkslategrey;
-}
-#main_logo{
-    position: absolute;
-}
-header, footer {
-    background-color: lightgreen;
-    color:black;
-    position: relative;
-    padding: 20px 0;
-}
-.idea-img{
-    display: block;
-    position: relative;
-    margin-top: 20px;
-    padding: 5px;
-    text-align: center;
+    background-color: rgb(46, 33, 119);
+    width: auto;
+    height: auto;
 }
 
-.idea-image p{
-    padding: 5px;
-    position: absolute;
-    color: aqua;
-    background: beige;
-    bottom: 0;
-}
-/* Navigation */
-#sub_nav {
-    position:absolute;
-    top:0;
-    right:5px;
+
+#content li {
+    display: inline-block;   
 }
 
-#main-nav ul, #sub_nav ul {
-    padding-left: 0;
-    
+/* spacing out li in a grid for nav */
+#content ul{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   list-style-type: none;
 }
-#main-nav li {
-   background: bisque;
-   border-bottom: 1px solid darkcyan; /* All li have an invisible border on the bottom */
-}
-
-#sub_nav li{
-    margin: 0 5px;
-
-
-}
-
-#main-nav a, #sub_nav a { /* change color for links and underlining */
-    color:darkgreen;
+#content a { /* change color for links and underlining */
+    color:burlywood;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
 
-#main-nav a:hover, #sub_nav a:hover {
-    border-bottom: 1px solid rgb(255, 255, 255);
-}
-#main-nav a:hover{
-    color:darkslategray;
+#content a:hover{
+    color:khaki;
+    border-bottom: 1px solid rgb(49, 27, 50);
 }
 
-#main-nav li, #sub_nav li{
-    list-style: none;  
-    text-align: center;
-    border-bottom: 1px solid rgb(255, 255, 255);  
+.container {
+    margin-bottom: 20px; /* Space between idea1 and idea2 */
 }
-
-
-/* Typography */
-header h1 {
-    text-align: center;
-}
-footer p {
-    text-align:center;
-}
-/*animations */
-#animation-fun{
+/* idea box 1 */
+#idea1 {
+    background-color: khaki;
+    display: flex; /* Create a horizontal layout */
+    justify-content: space-between; /* Push the image to the far right */
+    align-items: flex-start; /* Align the heading and paragraph to the top */
     padding: 20px;
-    background: green;
+    gap: 10px; /* Add spacing between elements */
+}
+
+#idea1 h3,
+#idea1 p {
+    margin: 0; /* Remove extra margins */
+}
+
+#idea1 img {
+    align-self: flex-start; /* Align the image with the top of the container */
+    width: 200px;
     height: 200px;
-    position: relative;
+    margin: 10px;
+    
+}
+
+/* idea box 2 */
+#idea2 {
+    background-color: burlywood;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the image and text */
+    padding: 20px;
+}
+
+#idea2 img {
+    align-self: flex-start; /* Align the image with the top of the container */
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+#idea2 .content {
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    gap: 10px; /* Add spacing between heading and paragraph */
+}
+
+#idea2 h3 {
+    margin: 0; /* Remove default margin */
+}
+
+#idea2 p {
+    margin: 0; /* Remove default margin for proper spacing */
+    text-align: justify; /* Align text nicely */
+}
+
+/* Idea box 3 */
+#idea3 {
+    background-color: khaki;
+    display: flex; /* Create a horizontal layout */
+    justify-content: space-between; /* Push the image to the far right */
+    align-items: flex-start; /* Align the heading and paragraph to the top */
+    padding: 20px;
+    gap: 10px; /* Add spacing between elements */
+}
+
+#idea3 h3,
+#idea3 p {
+    margin: 0; /* Remove extra margins */
+}
+
+#idea3 img {
+    align-self: flex-start; /* Align the image with the top of the container */
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    
+}
+
+
+/* Make the bottom section a flexbox */
+#content2 {
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    gap: 20px; /* Space between sections */
+}
+
+/* Style individual sections */
+.section {
+    flex: 1; /* Equal width for each section */
+    text-align: center; /* Center align content within sections */
+}
+
+/* Style lists in the sections */
+#left-section ul, #right-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#middle-section ul{
+    padding: 20;
+    margin: 20;
+}
+#middle-section li {
+    list-style-type: none; /* remove bullets */
+}
+#middle-section {
+    background-color: khaki;
+}
+
+/* Vertical spacing between list items */
+#left-section ul li, #middle-section ol li, #right-section ul li {
+    margin: 5px 0;
+}
+
+/* Grid layout for the right titles */
+#left-section ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for a square-like layout */
+    gap: none; /* Space between items in the grid */
+}
+
+#left-section{
+    background-color: burlywood;
+}
+
+/* Same thing but make it right */
+#right-section ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: none; 
+}
+
+#right-section img {
+    width: 200px; /* Set a specific width for right-hand images */
+    height: 50px; /* Maintain the aspect ratio */
+    margin: 30px 0; /* Add spacing around images */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#left-section img {
+    width: 200px;
+    height: 100px;
+    margin: 30px 0; /* Add spacing around images */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#right-section{
+    background-color: burlywood;
+}
+
+p, h2, h3 {
+    line-height: 1.6; /* Improve readability */
+    color: #281212;
+}
+
+
+footer{
+    background-color: khaki;
+    text-align: center;
+    color: burlywood;
+    margin: 30px 0; /* Add spacing around images */
+    border-radius: 20px;
+    border: 20px khaki;
+}
+
+#content2 a{
+    color: #281212;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#content2 a:hover{
+    color:brown;
 }
 #ball{
-    height: 30px;
-    width:30px;
-    background:white;
-    border-radius: 100px;
-    animation-name: fun;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fun{
-    0%{background-color: aquamarine;}
-    20%{background-color: aqua;}
-    30%{background-color: blue;}
-}
-/* media queries is always last */
-/* larger screens */
-@media only screen and (min-width: 760px) {
-    .columns {
-        display:flex;
-    }
-
-    #main-nav li {
-
-        flex:1;
-    }
-    #main-nav li:not(:last-child) {
-        border-right: 1px solid darkgreen
-    }
-    .idea-image p{
-        padding: 5px;
-        position: absolute;
-        color: aqua;
-        background: beige;
-        bottom: 0;
-    }
+    margin: auto;
+    border-radius: 20;
+    padding: 20;
+    color: white;
 }
