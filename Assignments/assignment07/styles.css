@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    background-color: bisque;
+}
+
+/* Header Styling */
+header {
+    color: darkcyan;
+    font-size: x-large;
+}
+
+/* Heading Styles */
+h1 {
+    color: cadetblue;
+    font-size: large;
+}
+
+h3 {
+    color: darkcyan;
+    font-size: larger;
+}
+
+header, h1, h3 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* Star Container (Centers the star) */
+.star-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Star Shape */
+.star {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 
+        39% 35%
+    );
+}
+
+/* Grid Container (Desktop Default) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 50px; /* Space between sections */
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Clickable Column (Left Section) */
+.clickable-column {
+    background-color: khaki;
+    padding: 20px;
+    margin: auto;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+}
+
+/* Star Section (Middle Section) */
+.star-section {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column; /* Keep items inside this section vertical */
+    align-items: center;
+    padding: 20px;
+    height: 350px;
+    margin: auto;
+    width: 250px;
+}
+
+/* Right Section */
+.box3 {
+    background-color: khaki;
+    padding: 20px;
+    height: auto;
+    width: 250px;
+    text-align: center;
+}
+
+/* Center images inside box3 */
+.box3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hides message initially */
+.hidden {
+    display: none;
+}
+
+footer{
+    text-align: center;
+}
+
+/* --- Mobile Layout Adjustments --- */
+@media (max-width: 768px) {
+    /* Stack sections vertically */
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Make sections take full width */
+    .clickable-column,
+    .star-section,
+    .box3 {
+        width: 90%; /* Adjust width for better mobile layout */
+        max-width: 300px; /* Prevents being too wide */
+        padding: 15px;
+    }
+
+    /* Adjust fonts for smaller screens */
+    header {
+        font-size: large;
+    }
+
+    h1 {
+        font-size: medium;
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+    footer {
+        font-size: small;
+    }
+
+    /* Reduce star size on mobile */
+    .star {
+        width: 80px;
+        height: 80px;
+    }
+}

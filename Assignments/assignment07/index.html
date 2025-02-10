@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>assignment07</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>Assignment 07</header>
+    <h1>Introduction to JavaScript</h1>
+    
+    <div class="grid-container">
+        <div class="clickable-column">
+            <h3>Click to say Hello!</h3>
+            <div id="message" class="hidden"></div> 
+        </div>
+    
+        <div class="star-section">
+            <h3>Change the color!</h3>
+            <div class="star-container">
+                <div class="star" id="star"></div>
+            </div>
+            <label for="colorPicker">Choose a color:</label>
+            <input type="color" id="colorPicker" value="#ffd700">
+        </div>
+    
+        <div class="box3">
+            <h3>Change the Image</h3>
+            <img id="image" src="https://picsum.photos/200/200" onclick="changeImage();"/>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <p> &copy; SavannaWelch2025 CSCE242</p>
+    </footer>
+  </body>
+</html>
