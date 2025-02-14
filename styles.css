@@ -9,7 +9,7 @@ body {
 }
 
 /* Add a formatted div for better page content viewing */
-header, #assign1, #assign2, #assign3, #assign4, #assign7, #project1, #project2, #project3 {
+header, #assign1, #assign2, #assign3, #assign4, #assign7, #project1, #project2, #project3{
     background-color: lightgreen; /* lightgreen background for content area */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */

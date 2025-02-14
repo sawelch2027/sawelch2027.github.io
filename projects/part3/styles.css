@@ -1,0 +1,466 @@
+:root{
+    --main-background-color: rgb(121, 121, 121); 
+    --primary-color:rgb(62, 62, 62);
+}
+
+body{
+    background:rgb(171, 160, 160);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1, a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid transparent; 
+}
+
+#top-header{
+    background-color: #222222;
+    display: flex;
+    padding: 20px;
+    width: 89.5%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #000000;
+}
+
+#top-header, h1{
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+#nav a:hover {
+    color:azure;
+    border-bottom: 1px solid rgb(49, 27, 50);
+}
+
+#main-content{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 0;
+ 
+}
+
+#green-nav{
+    display: grid;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #000000;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    background-color: grey;
+    width: auto;
+    height: 90px;
+    
+}
+
+#green-nav, ul{
+    display: flex;
+   justify-content: center;
+}
+
+#green-nav, li{
+    list-style-type: none;
+    margin-right: 50px;
+    margin-left: 50px
+}
+
+#pink-info{
+    background-color: whitesmoke;
+    justify-content: left;
+    border-radius: 20px;
+    display:block;
+    margin-right: 1120px;
+    margin-left: 50px;
+    text-align: justify;
+    width: 400px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#pink-info p{
+    margin:10px;
+}
+
+#pink-info img {
+    align-self: flex-start; /* Align the image with the top of the container */
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    
+}
+
+#green-info{
+    background-color: aliceblue;
+    border-radius: 20px;
+    position: absolute;
+    top: 60;
+    right: 0;
+    width: 60%; /* Adjust width as needed */
+    margin-right: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#green-info, h3{
+    text-align: center;
+    color:#222222
+}
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    box-sizing:content-box;
+  }
+  
+#input-container {
+    grid-column: 2; /* Position it under green-info */
+    grid-row: 2; /* Below green-info */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 35px;
+    margin-top: -100px;
+}
+
+#notice{
+    background-color: transparent;
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin-left: 1150px;
+    margin-top: -120px;
+}
+
+#notice, h2{
+    color: black;
+    font-size: x-large;
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
+/** End of css for main index **/
+#tomato-content, #grid{
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Left (image) | Middle (big-info) | Right (extra space) */
+    gap: 20px; /* Adjust space between sections */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+}
+
+#savanna-img{
+    border-radius: 20px;
+    display: block;
+    margin-left: 30px; /* Space from the left */
+    margin-right: 0; /* Remove unnecessary large margin */
+    border-width: 10px;
+    border-color: #000000;
+}
+
+#big-info{
+    background-color: #222222;
+    color: white; /* Improve readability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: 230px;
+    height: 160px;
+    border-radius: 15px;
+}
+
+#info-img { 
+    margin-left: 1255px;
+    margin-top: -220px;
+}
+
+#end-info{
+    background-color: #222222;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#end-info, p{
+    font-size: medium;
+    color: #555555ed;
+}
+
+/** end of about tinytomato **/
+/** need to fix padding on blog**/
+
+.title{
+    margin-left: 50px;
+    background-color: var(--primary-color);
+    width: 15%;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+#first-paragraph{
+    background-color: var(--main-background-color);
+    margin-right: 700px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#blog-img{
+    margin-left: 900px;
+    margin-top: -240px;
+    padding: 10px;
+    
+}
+
+#question{
+   padding: 10px;
+   width: 100%;
+   margin-left: 50px;
+}
+
+#question, h3{
+    color: black;
+    text-align: left;
+}
+
+#second-paragraph {
+    background-color: var(--main-background-color);
+    margin-left: 700px;
+    margin-right: 50px;
+    margin-top: -230px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#blogtwo-img {
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#third-paragraph{
+background-color: var(--main-background-color);
+margin-left: 700px;
+margin-right: 50px;
+margin-top: 50px;
+border-radius: 10px;
+padding: 10px;
+}
+
+#blogthree-img{
+    margin-left: 100px;
+    margin-top: -230px;
+    padding: 10px;
+}
+
+#fourth-paragraph{
+    background-color: var(--main-background-color);
+    margin-left: 50px;
+    margin-right: 700px;
+    margin-top: 65px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#blogfour-img{
+    margin-left: 900px;
+    margin-top: -230px;
+    padding: 10px;
+}
+/** end of blog **/
+
+#greenbar{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: var(--primary-color);
+    width:fit-content;
+    height:auto;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+#link-one{
+    margin-left: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+#link-two{
+    margin-right: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+#double-paragraph{
+    background-color: grey;
+    border-radius: 10px;
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the paragraphs apart */
+    height: 100%; /* Ensure the div has a defined height */
+
+}
+
+#paragraph1, #paragraph2{
+    text-align: center;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  /** Contact us done **/
+
+  #grid2 {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto auto; /* Auto rows based on content height */
+    gap: 20px; /* Space between rows */
+    padding-top: 20px; /* Add some space at the top */
+    justify-items: center; /* Centers everything horizontally */
+}
+
+#g1 {
+    margin-left: 50px;
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+#g1, #bg2 {
+    background-color: var(--primary-color);
+    margin-right: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+#bg2, ol {
+    display: block;
+    justify-content: center;
+}
+
+#bg2, li {
+    list-style-type: none;
+}
+
+#whats-wrong {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    width: 50%;
+    height: fit-content;
+    justify-content: space-between;
+    margin-top: 0; /* Make sure it's directly under #g1 */
+}
+
+form {
+    background-color: var(--main-background-color);
+    width: fit-content;
+    padding: 10px;
+    justify-content: left;
+    margin-left: 50px; /* Align form with other elements */
+    margin-top: 0; /* Remove margin-top for consistency */
+}
+
+.rating {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal alignment */
+    justify-content: flex-start; /* Align to the left */
+    align-items: center; /* Vertically center the stars */
+    gap: 10px; /* Add space between stars if needed */
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+  /** end of feedback **/
+  #gallery1, #gallery3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 70px;
+  }
+
+  #gallery2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    margin-left: 160px;
+  }
+
