@@ -463,4 +463,159 @@ form {
     width: 100%;
     margin-left: 160px;
   }
+/* For smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust #top-header layout */
+    #top-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Make the navigation stack vertically */
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Adjust main content grid */
+    #main-content {
+        grid-template-columns: 1fr; /* Stack content vertically */
+    }
+
+    /* Adjust the #green-nav grid for smaller screens */
+    #green-nav {
+        grid-template-columns: 1fr 1fr; /* 2 columns instead of 5 */
+        height: auto;
+    }
+
+    #green-nav li {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    /* Adjust #pink-info */
+    #pink-info {
+        width: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adjust #green-info */
+    #green-info {
+        width: 100%; /* Full width on smaller screens */
+        position: relative;
+        margin-right: 0;
+    }
+
+    /* Adjust form layout */
+    form {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adjust the rating stars */
+    .rating {
+        font-size: 1.5rem; /* Make stars a little smaller */
+        justify-content: flex-start;
+    }
+
+    /* Adjust grid layout for galleries */
+    #gallery1, #gallery2, #gallery3 {
+        grid-template-columns: 1fr 1fr; /* Stack the images into 2 columns */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adjust grid for tomato-content */
+    #tomato-content, #grid {
+        grid-template-columns: 1fr; /* Stack sections on top of each other */
+    }
+
+    #savanna-img {
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+    }
+
+    /* Adjust for blog sections */
+    #first-paragraph, #second-paragraph, #third-paragraph, #fourth-paragraph {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    /* Reduce margin and padding for smaller screens */
+    .title, #blog-img, #info-img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adjust for form input */
+    input[type=text] {
+        width: 90%;
+    }
+
+    /* Modify #notice for smaller screens */
+    #notice {
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    /* Adjust spacing for paragraphs */
+    #double-paragraph {
+        padding: 10px;
+        height: auto; /* Let content flow naturally */
+    }
+}
+
+/* For even smaller devices (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Reduce font size for mobile screens */
+    }
+
+    /* Make form elements larger and easier to interact with */
+    input[type=text] {
+        width: 100%; /* Full width for text input */
+        padding: 15px;
+    }
+
+    .rating {
+        font-size: 1.2rem; /* Make stars smaller */
+    }
+
+    /* Adjust image sizes */
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
+    #savanna-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Adjust text alignment for small screens */
+    #pink-info p, #green-info h3 {
+        font-size: 16px;
+    }
+
+    #greenbar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust the layout of the galleries */
+    #gallery1, #gallery3 {
+        grid-template-columns: 1fr; /* Stack gallery items */
+    }
+}
 
