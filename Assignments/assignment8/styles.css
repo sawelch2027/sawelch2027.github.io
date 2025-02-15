@@ -1,0 +1,250 @@
+:root {
+    --main-background-color: beige;
+    --primary-color: rgb(106, 131, 140);
+}
+
+a + a::before {
+    content: "  |  ";
+}
+
+body {
+    background-color: var(--main-background-color);
+}
+
+/* Menu */
+#menu {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Menu links for larger screens */
+.regular-menu {
+    display: block; /* Show menu items on large screens */
+}
+
+.regular-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+/* Dropdown button hidden on larger screens */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Dropdown link styles */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Style the input box */
+#transportInput {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Center the box for Exercise 1 */
+#box {
+    display: block;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 40px;
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 20px;
+    width: 50%; /* Adjust width for responsiveness */
+    height: fit-content;
+}
+
+/* Style the transport image */
+#transportImage {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: navy;
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+#imageContainer, #heartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for Heart container */
+#heartContainer {
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 40px;
+    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Style for heart */
+#heart {
+    font-size: 100px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Style for color buttons */
+#colorbuttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Keep sections centered and static */
+header, footer, h2, #menu {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#exercise1{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 100px;
+    margin-left: 485px;
+    margin-right: 100px;
+    height: fit-content;
+    width: fit-content;
+}
+
+#exercise2{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    padding: 100px;
+    margin-left: 585px;
+    margin-right: 100px;
+    height: fit-content;
+    width: fit-content;
+}
+@media (min-width: 900px) {
+    .dropbtn {
+        display: none; /* Hide button on large screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .regular-menu {
+        display: none;
+    }
+
+    /* Show dropdown button and menu on small screens */
+    .dropdown {
+        display: block; /* Show dropdown on small screens */
+    }
+
+    /* When the dropdown button is clicked, show the dropdown content */
+    .dropdown.show .dropdown-content {
+        display: block;
+    }
+    /* Adjust Exercise 1 and Exercise 2 */
+    #exercise1, #exercise2 {
+        width: 90%; /* Make sections take up 90% of the screen width */
+        margin-left: 5%; /* Center content */
+        margin-right: 5%; /* Center content */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    /* Make content inside sections more compact */
+    #exercise1 p, #exercise2 p {
+        font-size: 16px; /* Slightly smaller font for smaller screens */
+    }
+
+    /* Reduce margins for better centering on small screens */
+    #exercise1, #exercise2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* Media Query for Extra Small Screens (Phones) */
+@media screen and (max-width: 480px) {
+    /* Make Exercise 1 and Exercise 2 take up the full width */
+    #exercise1, #exercise2 {
+        width: 100%; /* Full width on very small screens */
+        padding: 10px; /* Less padding on very small screens */
+    }
+
+    /* Reduce font size for better readability on phones */
+    #exercise1 p, #exercise2 p {
+        font-size: 14px;
+    }
+
+    /* Center the sections and reduce their size */
+    #exercise1, #exercise2 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+}

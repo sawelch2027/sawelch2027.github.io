@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Assignment08</title>
-        <link ref="styles" href="styles.css">
-        <link ref="script" href="script.js">
-    </head>
-    <body>
-        <header>
-            <h1>Assignment 8</h1>
-        </header>
-        <h2> If statements</h2>
-        <a href="exercise1.html">Exercise 1</a>
-        <a href="exercise2.html">Exercise 2</a>
-        <div id="box">
-            <p>Travelling</p>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment08</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Assignment 8</h1>
+    </header>
+    <h2>If Statements</h2>
+    <div id="menu">
+        <!-- Regular menu for small screens -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">&dArr;</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showExercise(1)">Exercise1</a>
+                <a href="#" onclick="showExercise(2)">Exercise2</a>
+            </div>
         </div>
-        <footer>
-            &copy; SavannaWelch2025 CSCE242
-        </footer>
-    </body>
+        <!-- Regular menu items for large screens -->
+        <div class="regular-menu">
+            <a href="#" onclick="showExercise(1)">Exercise1</a>
+            <a href="#" onclick="showExercise(2)">Exercise2</a>
+        </div>
+    </div>
+    <!-- Exercise 1: Traveling Section -->
+    <div id="exercise1" class="exercise-section">
+        <h3>Enter your mode of transportation:</h3>
+        <input type="text" id="transportInput" placeholder="Enter mode of transportation">
+        <br>
+        <div id="imageContainer">
+            <img id="transportImage" src="" alt="Mode of transportation">
+        </div>
+    </div>
+
+    <!-- Exercise 2: Heart Coloring Section -->
+    <div id="exercise2" class="exercise-section" style="display: none;">
+        <h3>Color my Heart</h3>
+        <div id="colorbuttons">
+            <button onclick="changeHeartColor('red')">Red</button>
+            <button onclick="changeHeartColor('green')">Green</button>
+            <button onclick="changeHeartColor('blue')">Blue</button>
+        </div>
+        <div id="heart">&#10084;</div>
+    </div>
+
+    <footer>
+        &copy; SavannaWelch2025 CSCE242
+    </footer>
+
+</body>
 </html>
