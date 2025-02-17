@@ -593,6 +593,14 @@ form {
         text-align: center;
         padding: 15px;
     }
+
+    #question h3{
+        text-align: center; /* Center text */
+        overflow-wrap: break-word; /* Ensures words break properly */
+        word-wrap: break-word; 
+        word-break: break-word; /* Break long words */
+    }
+    
     #big-info {
         background-color: #ffc5c5;
         display: flex;
@@ -672,6 +680,63 @@ form {
     align-items: center;
     gap: 10px; /* Keeps even spacing */
     flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* NAVIGATION - Stays vertical */
+    #nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* GRID LAYOUT - Adjusts for better fit */
+    #tomato-content, #grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 10px; /* Less space */
+        padding: 10px;
+    }
+
+    /* IMAGE CENTERING */
+    .img {
+        width: 150px; /* Slightly smaller */
+        height: 150px;
+    }
+
+    #savanna-img, #info-img {
+        display: block;
+        margin: auto; /* Centers images */
+        max-width: 100%;
+    }
+
+    /* INFO BOXES - Stay contained */
+    #big-info, #end-info {
+        width: 90%;
+        margin: auto;
+        height: auto; /* Adapts to text size */
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* BLOG IMAGES - Stay centered */
+    #blog-img, #blogtwo-img, #blogthree-img, #blogfour-img {
+        margin: 20px auto; /* Centers images */
+        display: block;
+    }
+
+    /* BLOG PARAGRAPHS - Adjust alignment */
+    #first-paragraph, #second-paragraph, #third-paragraph, #fourth-paragraph {
+        margin: 10px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    /* STARS - Stay in a row */
+    .rating {
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
 }
 
