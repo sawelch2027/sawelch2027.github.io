@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- put this in a grid with accurate alignment -->
     <head>
         <title>The TinyTomato</a></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,65 +43,65 @@
         <li>Of course! If you’re having trouble finding something or if the layout feels confusing, just reach out and let me know what’s going on. I want the site to be as user-friendly as possible, so any feedback is super helpful!</li>
     </ol>
 </div>
-
-<div id="whats-wrong">
-    <h4>See something you didn't like or think something needs to be changed? Please let us know what you found and address in the box below:</h4>
-    <input type="radio" id="softwareproblem" name="fav_language" value="HTML">
-    <label for="html">Software problem</label><br>
-    <input type="radio" id="Inappropriate-photo" name="fav_language" value="photo">
-    <label for="css">Inappropriate Photo/media</label><br>
-    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-    <label for="javascript">Ideas are not appropriate</label><br>
-    <input type="radio" id="javascript" name="fav_language" value="Other">
-    <label for="other"> Other</label>
-    <br>
-</div>
-<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-    <div class="rating">
-        <p>How would you rate the overall design of the blog?</p>
-        <input type="radio" id="design5" name="design" value="5"><label for="design5">★</label>
-        <input type="radio" id="design4" name="design" value="4"><label for="design4">★</label>
-        <input type="radio" id="design3" name="design" value="3"><label for="design3">★</label>
-        <input type="radio" id="design2" name="design" value="2"><label for="design2">★</label>
-        <input type="radio" id="design1" name="design" value="1"><label for="design1">★</label>
-    </div>
-    <br>
-    <div class="rating">
-        <p>How would you rate the quality of the art content?</p>
-        <input type="radio" id="art5" name="art" value="5"><label for="art5">★</label>
-        <input type="radio" id="art4" name="art" value="4"><label for="art4">★</label>
-        <input type="radio" id="art3" name="art" value="3"><label for="art3">★</label>
-        <input type="radio" id="art2" name="art" value="2"><label for="art2">★</label>
-        <input type="radio" id="art1" name="art" value="1"><label for="art1">★</label>
-    </div>
-    <br>
-    <div class="rating">
-        <p>How easy is it to navigate the website?</p>
-        <input type="radio" id="usability5" name="usability" value="5"><label for="usability5">★</label>
-        <input type="radio" id="usability4" name="usability" value="4"><label for="usability4">★</label>
-        <input type="radio" id="usability3" name="usability" value="3"><label for="usability3">★</label>
-        <input type="radio" id="usability2" name="usability" value="2"><label for="usability2">★</label>
-        <input type="radio" id="usability1" name="usability" value="1"><label for="usability1">★</label>
-    </div>
-    <br>
-    <div class="rating">
-        <p>Would you recommend my blog to others?</p>
-        <input type="radio" id="recommend5" name="recommend" value="5"><label for="recommend5">★</label>
-        <input type="radio" id="recommend4" name="recommend" value="4"><label for="recommend4">★</label>
-        <input type="radio" id="recommend3" name="recommend" value="3"><label for="recommend3">★</label>
-        <input type="radio" id="recommend2" name="recommend" value="2"><label for="recommend2">★</label>
-        <input type="radio" id="recommend1" name="recommend" value="1"><label for="recommend1">★</label>
+<div id="rate-container">
+    <div id="whats-wrong">
+        <h4>See something you didn't like or think something needs to be changed? Please let us know what you found and address in the box below:</h4>
+        <input type="radio" id="softwareproblem" name="fav_language" value="HTML">
+        <label for="softwareproblem">Software problem</label><br>
+        <input type="radio" id="Inappropriate-photo" name="fav_language" value="photo">
+        <label for="Inappropriate-photo">Inappropriate Photo/media</label><br>
+        <input type="radio" id="idea-appropriate" name="fav_language" value="JavaScript">
+        <label for="idea-appropriate">Ideas are not appropriate</label><br>
+        <input type="radio" id="other" name="fav_language" value="Other">
+        <label for="other">Other</label><br>
     </div>
 
-    <div id="question" class="input-container">
-        <h3> Got something that needs to be shared? Let me know!</h3>
-        <label for="enter here">Enter Here!</label>
-        <input type="text" id="enterhere" name="enterhere">
-     </div>
-</form>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <div class="rating">
+            <p>How would you rate the overall design of the blog?</p>
+            <input type="radio" id="design5" name="design" value="5"><label for="design5">★</label>
+            <input type="radio" id="design4" name="design" value="4"><label for="design4">★</label>
+            <input type="radio" id="design3" name="design" value="3"><label for="design3">★</label>
+            <input type="radio" id="design2" name="design" value="2"><label for="design2">★</label>
+            <input type="radio" id="design1" name="design" value="1"><label for="design1">★</label>
+        </div>
+        <br>
+        <div class="rating">
+            <p>How would you rate the quality of the art content?</p>
+            <input type="radio" id="art5" name="art" value="5"><label for="art5">★</label>
+            <input type="radio" id="art4" name="art" value="4"><label for="art4">★</label>
+            <input type="radio" id="art3" name="art" value="3"><label for="art3">★</label>
+            <input type="radio" id="art2" name="art" value="2"><label for="art2">★</label>
+            <input type="radio" id="art1" name="art" value="1"><label for="art1">★</label>
+        </div>
+        <br>
+        <div class="rating">
+            <p>How easy is it to navigate the website?</p>
+            <input type="radio" id="usability5" name="usability" value="5"><label for="usability5">★</label>
+            <input type="radio" id="usability4" name="usability" value="4"><label for="usability4">★</label>
+            <input type="radio" id="usability3" name="usability" value="3"><label for="usability3">★</label>
+            <input type="radio" id="usability2" name="usability" value="2"><label for="usability2">★</label>
+            <input type="radio" id="usability1" name="usability" value="1"><label for="usability1">★</label>
+        </div>
+        <br>
+        <div class="rating">
+            <p>Would you recommend my blog to others?</p>
+            <input type="radio" id="recommend5" name="recommend" value="5"><label for="recommend5">★</label>
+            <input type="radio" id="recommend4" name="recommend" value="4"><label for="recommend4">★</label>
+            <input type="radio" id="recommend3" name="recommend" value="3"><label for="recommend3">★</label>
+            <input type="radio" id="recommend2" name="recommend" value="2"><label for="recommend2">★</label>
+            <input type="radio" id="recommend1" name="recommend" value="1"><label for="recommend1">★</label>
+        </div>
+
+        <div id="question" class="input-container">
+            <h3>Got something that needs to be shared? Let me know!</h3>
+            <label for="enterhere">Enter Here!</label>
+            <input type="text" id="enterhere" name="enterhere">
+        </div>
+    </form>
 </div>
-<footer>
+    <footer>
     &copy; SavannaWelch2025 CSCE242
 </footer>
-</div>
+
 </html>

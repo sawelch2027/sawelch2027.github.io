@@ -1,6 +1,9 @@
 :root{
     --main-background-color: beige; 
     --primary-color:rgb(137, 213, 140);
+    --border-color: rgb(83, 141, 85);
+    --border-two-color: #c46f6f; 
+    --secondary-color: #ffc5c5;
 }
 
 body{
@@ -9,20 +12,20 @@ body{
 }
 
 h1, a{
-    color: #c46f6f;
+    color: var(--border-two-color);
     text-decoration: none;
     padding: 20px;
     border-bottom: 1px solid transparent; 
 }
 
 #top-header{
-    background-color: #ffc5c5;
+    background-color: var(--secondary-color);
     display: flex;
     padding: 20px;
     width: auto;
     border-style: solid;
     border-width: 10px;
-    border-color: #c46f6f;
+    border-color: var(--border-two-color);
 }
 
 #top-header, h1{
@@ -44,7 +47,7 @@ nav{
 }
 
 #nav a {
-    color: rgb(83, 141, 85);
+    color: var(--border-color);
     text-decoration: none;
     padding: 20px;
     border-bottom: 1px solid transparent;
@@ -59,7 +62,7 @@ nav{
     display: grid;
     border-style: solid;
     border-width: 5px;
-    border-color: rgb(83, 141, 85);
+    border-color: var(--border-color);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none;
     background-color: var(--primary-color);
@@ -88,7 +91,7 @@ nav{
    }
 
 #pink-info{
-    background-color: #ffc5c5;
+    background-color: var(--secondary-color);
     justify-content: left;
     border-radius: 20px;
     display:block;
@@ -128,7 +131,7 @@ nav{
 
 #green-info, h3{
     text-align: center;
-    color:rgb(83, 141, 85);
+    color:var(--border-color);
 }
 
 input[type=text] {
@@ -163,7 +166,7 @@ input[type=text] {
 }
 
 #notice, h2{
-    color: rgb(83, 141, 85);
+    color: var(--border-color);
     font-size: x-large;
 }
 
@@ -179,7 +182,26 @@ footer{
     align-items: center; /* Aligns items vertically */
     padding: 20px;
 }
+#about-container{
+    display: block;
+    justify-content: space-between;
+}
+#fav-supplies, #fav-artists{
+    background-color: var(--primary-color);
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
 
+#fav-supplies h2, #fav-artists h2{
+    color: var(--border-color);
+}
+
+#fav-supplies li, #fav-artists li {
+    color: var(--border-color);
+    padding: 5px;
+}
 .img{
     width: 200px;
     height: 200px;
@@ -192,11 +214,11 @@ footer{
     margin-right: 0; /* Remove unnecessary large margin */
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(83, 141, 85);
+    border-color: var(--border-color);
 }
 
 #big-info{
-    background-color: #ffc5c5;
+    background-color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,11 +234,11 @@ footer{
     border-radius: 20px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(83, 141, 85);
+    border-color: var(--border-color);
 }
 
 #end-info{
-    background-color: #ffc5c5;;
+    background-color: var(--secondary-color);;
     justify-content: center;
     text-align: center;
     margin-left: 50px;
@@ -228,21 +250,30 @@ footer{
 
 #end-info, p{
     font-size: medium;
-    color: rgb(83, 141, 85);
+    color: var(--border-color);
 }
 
 /** end of about tinytomato **/
 /** need to fix padding on blog**/
 
 .title{
-    margin-left: 50px;
+    margin: auto;
+    text-align: center;
     background-color: var(--primary-color);
-    width: 15%;
+    width: 50%;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 20px;
     
 }
+
+.container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    margin: auto;
+}
+
 
 #first-paragraph{
     background-color: var(--primary-color);
@@ -254,8 +285,8 @@ footer{
 
 #blog-img{
     margin-left: 900px;
-    margin-top: -240px;
-    padding: 10px;
+    margin-top: -500px;
+    padding: 20px;
     
 }
 
@@ -275,14 +306,16 @@ footer{
     margin-left: 700px;
     margin-right: 50px;
     margin-top: -230px;
+    margin-bottom: 20px;
     border-radius: 10px;
     padding: 10px;
 }
 
 #blogtwo-img {
     margin-left: 100px;
-    margin-top: 50px;
-    padding: 10px;
+    margin-top: 140px;
+    margin-bottom: 0;
+    padding: 20px;
 }
 
 #third-paragraph{
@@ -290,13 +323,14 @@ background-color: var(--primary-color);
 margin-left: 700px;
 margin-right: 50px;
 margin-top: 50px;
+margin-bottom: 50px;
 border-radius: 10px;
 padding: 10px;
 }
 
 #blogthree-img{
     margin-left: 100px;
-    margin-top: -230px;
+    margin-top: -600px;
     padding: 10px;
 }
 
@@ -304,17 +338,17 @@ padding: 10px;
     background-color: var(--primary-color);
     margin-left: 50px;
     margin-right: 700px;
-    margin-top: 65px;
+    margin-top: 100px;
     border-radius: 10px;
     padding: 10px;
 }
 
 #blogfour-img{
     margin-left: 900px;
-    margin-top: -230px;
+    margin-top: -520px;
     padding: 10px;
-}
-/** end of blog **/
+} 
+/**end of blog **/
 
 #greenbar{
     margin-left: 50px;
@@ -331,53 +365,126 @@ padding: 10px;
     text-align: center;
 }
 
-#link-one{
-    margin-left: 30px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(83, 141, 85);
+#container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the items */
 }
 
-#link-two{
-    margin-right: 30px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(83, 141, 85);
+#contact-container {
+    display: block;
+    max-width: 600px;
+    margin: 30px 0 60px 0;
+    margin-left: 55px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative; /* Add this line to position it absolutely */
+    left: 0; /* Aligns it to the left side of the screen */
 }
 
-#double-paragraph{
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    width: auto;
-    height: 500px;
+/* Form Styling */
+#contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes the paragraphs apart */
-    height: 100%; /* Ensure the div has a defined height */
-
 }
 
-#paragraph1, #paragraph2{
-    text-align: center;
+#contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.arrow {
-    border: solid rgb(83, 141, 85);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-  }
+#contact-form input,
+#contact-form textarea {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-  
-  .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-  }
+#contact-form button {
+    background-color: #2a5d34; /* Dark Green */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact-form button:hover {
+    background-color: #1f4726;
+}
+
+/* Contact Info Styling */
+#contact-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#contact-info h3 {
+    color: #2a5d34;
+    margin-bottom: 10px;
+}
+
+#contact-info a {
+    text-decoration: none;
+    color: #6b9b65;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+#side-content {
+    flex: 1; /* Allow it to grow and fill space */
+    margin-left: 20px; /* Space between contact and side content */
+    background: #f9f9f9; /* Background color for side content */
+    padding: 20px; /* Padding for the side content */
+    border-radius: 8px; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#side-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.review {
+    margin-bottom: 15px; /* Space between reviews */
+    padding: 10px;
+    border-left: 4px solid #2a5d34; /* Left border for style */
+}
+
+.review p {
+    margin: 0; /* Remove default margin */
+}
+
+.review-author {
+    font-style: italic; /* Style for author */
+    color: #666; /* Optional: muted color for the author */
+}
+
+.more-reviews {
+    display: inline-block; /* Make the link a button */
+    margin-top: 10px;
+    color: #2a5d34; /* Match with button color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
   /** Contact us done **/
+  #rate-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the items */
+    margin-left: 50px; /* Align with your existing margin */
+    margin-right: 50px; /* Align with your existing margin */
+}
 
   #grid2 {
     display: grid;
@@ -416,65 +523,65 @@ padding: 10px;
 }
 
 #whats-wrong {
-    margin-left: 50px;
-    margin-right: 50px;
     padding: 10px;
     background-color: var(--primary-color);
-    width: 50%;
+    width: 48%; /* Use a percentage to control width */
     height: fit-content;
-    justify-content: space-between;
     margin-top: 0; /* Make sure it's directly under #g1 */
 }
 
 form {
     background-color: var(--primary-color);
-    width: fit-content;
+    width: 48%; /* Use a percentage to control width */
     padding: 10px;
-    justify-content: left;
-    margin-left: 50px; /* Align form with other elements */
     margin-top: 0; /* Remove margin-top for consistency */
 }
 
+/* Keep existing styles for rating */
 .rating {
     display: flex;
-    flex-direction: row; /* Change to row for horizontal alignment */
+    flex-direction: row; /* Horizontal alignment */
     justify-content: flex-start; /* Align to the left */
     align-items: center; /* Vertically center the stars */
     gap: 10px; /* Add space between stars if needed */
 }
 
 .rating input {
-    display: none;
+    display: none; /* Hide the radio buttons */
 }
 
 .rating label {
-    font-size: 2rem;
-    color: rgb(83, 141, 85);
-    cursor: pointer;
+    font-size: 2rem; /* Size for stars */
+    color: var(--border-color);
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .rating input:checked ~ label {
-    color: gold;
+    color: gold; /* Change color when checked */
 }
 
   /** end of feedback **/
-  #gallery1, #gallery3{
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    padding: 10px;
-    margin-left: 70px;
-    width: auto;
-  }
+  #gallery1, #gallery3 {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    justify-content: center; /* Center the items horizontally */
+    padding: 10px; /* Padding around the gallery */
+    width: 100%; /* Full width to align properly */
+}
 
-  #gallery2{
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    padding: 10px;
-    width: auto;
-    margin-left: 160px;
-  }
+#gallery1 img, #gallery2 img, #gallery3 img { /* Style for images */
+    max-width: 100%; /* Ensure images are responsive */
+    height: 450px; /* Maintain aspect ratio */
+    margin: 5px; /* Optional: space between images */
+}
+
+#gallery2 {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    justify-content: center; /* Center the items horizontally */
+    padding: 10px; /* Padding around the gallery */
+    width: 100%; /* Full width to align properly */
+}
   @media only screen and (max-width: 900px) {
     #green-nav {
         display: flex;
@@ -517,13 +624,13 @@ form {
         padding: 15px 0; /* Make it more tappable */
         text-align: center;
         text-decoration: none;
-        color: rgb(83, 141, 85);
+        color: var(--border-color);
         background-color: var(--primary-color); /* Ensure visibility */
-        border-bottom: 1px solid #c46f6f; /* Optional: Add separator */
+        border-bottom: 1px solid var(--border-two-color); /* Optional: Add separator */
     }
 
     #nav a:hover {
-        background-color: #ffc5c5; /* Add hover effect */
+        background-color: var(--secondary-color); /* Add hover effect */
         color: black;
     }
 
@@ -566,55 +673,64 @@ form {
     }
 
     #tomato-content, #grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 20px;
-        padding: 10px;
-    }
-
-    /* Adjust images in About TinyTomato */
-    #savanna-img, #info-img {
-        width: 80%; /* Responsive sizing */
-        display: block;
-        position: relative;
-        z-index: 2; /* Ensure it's above other content */
-        border: none;
-        margin: auto;
-    }
-
-    /* Prevent overlapping of info divs */
-    #big-info, #end-info {
-        position: relative;
-        z-index: 1; /* Keep text below images */
-        width: 90%;
-        margin: 15px auto;
-        text-align: center;
-        padding: 15px;
-    }
-
-    #question h3{
-        text-align: center; /* Center text */
-        overflow-wrap: break-word; /* Ensures words break properly */
-        word-wrap: break-word; 
-        word-break: break-word; /* Break long words */
-    }
-    
-    #big-info {
-        background-color: #ffc5c5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* Left (image) | Middle (big-info) | Right (extra space) */
+        gap: 20px; /* Adjust space between sections */
+        align-items: center; /* Aligns items vertically */
         padding: 20px;
-        width: 90%; /* Adjust width for responsiveness */
-        max-width: 600px; /* Prevent excessive stretching */
-        height: auto; /* Allow height to expand with content */
-        border-radius: 15px;
-        text-align: center; /* Center text */
-        overflow-wrap: break-word; /* Ensures words break properly */
-        word-wrap: break-word; 
-        word-break: break-word; /* Break long words */
+    }
+
+    #fav-supplies, #fav-artists {
+        margin-left: 0px; /* Remove left margin */
+        margin-right: 0px; /* Remove right margin */
+        width: 100%; /* Full width for both sections */
+        padding: 0px; /* Add padding for better spacing */
+        display: block;
+    }
+
+    #fav-supplies li, #fav-artists li{
+        margin-left: 0px; /* Remove left margin */
+        margin-right: 0px; /* Remove right margin */
+        width: auto; /* Full width for both sections */
+        padding: 10px; /* Add padding for better spacing */
+        align-items: center;
+    }
+    #savanna-img {
+    display: block;
+    border: none;
+    gap: 10px;
+    padding: 20px;
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+    margin-bottom: 15px;
+    }
+
+    #big-info {
+        margin-right: 0; /* Remove right margin */
+        padding: 15px; /* Adjust padding */
+        width: 100%; /* Full width */
+    }
+
+    #info-img {
+        display: block;
+    border: none;
+    margin-bottom: auto;
+    padding: 20px;
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+        border: none;
+        
+    }
+
+    #end-info {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width */
+    }
+
+    /* Additional adjustments for text sizes if needed */
+    #end-info, p {
+        font-size: small; /* Decrease font size */
     }
 
     /* Blog section fixes */
@@ -680,6 +796,17 @@ form {
     align-items: center;
     gap: 10px; /* Keeps even spacing */
     flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    }
+
+    #rate-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    #whats-wrong,
+    form {
+        width: 100%; /* Full width for both elements */
+        margin: 10px 0; /* Add vertical margin between elements */
     }
 }
 

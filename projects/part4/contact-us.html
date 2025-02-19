@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- Change out the webpages for something else, make this page longer -->
     <head>
         <title>The TinyTomato</a></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,21 +26,50 @@
         <h2>Feel free to reach out to connect, share, or let us know what we should change!</h2>
         <p>Find us on Instagram or X/Twitter to see a wider arrange of my work and to purchase commissions when open! We’d love to hear from you! Whether you have feedback, suggestions, or just want to say hi, don’t hesitate to reach out. Follow us for updates, behind-the-scenes content, and more fun art-related posts. Can't wait to see you there!</p>
 </div>
-<div id="grid">
-<div id="link-one">
-    <iframe src="https://www.instagram.com/" height="500" width="500" title="instagram"></iframe>
+<div id="container">
+<div id="contact-container">
+    <h2>Get in Touch!</h2>
+    <p>Have a question, commission request, or just want to say hi? I'd love to hear from you! Fill out the form below or reach out via social media.</p>
+
+    <form id="contact-form" action="submit-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div id="contact-info">
+        <h3>Other Ways to Reach Me</h3>
+        <p><strong>Email:</strong> <a href="mailto:sawelch@email.sc.edu">Savanna Welch email</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/tinytomato2.0" target="_blank">@tinytomato2.0</a></p>
+        <p><strong>Twitter/X:</strong> <a href="https://twitter.com/tinytomato" target="_blank">@tinytomato</a></p>
+    </div>
 </div>
-<div id="double-paragraph">
-<div id="paragraph1">
-    <p><i class="arrow left"></i>Add us on instagram here!</i></p> 
-</div>
-<h3 style="text-align: center;"> We'll be opening up on pinterest soon!</h3>
-<div id="paragraph2">
-    <p>Add us on X/Twitter here! <i class="arrow right"></i></p>
-</div>
-</div>
-<div id="link-two">
-    <iframe src="https://x.com/" height="500" width="500" title="X"></iframe>
+<div id="side-content">
+    <h2>What People Are Saying</h2>
+    <div class="review">
+        <p>"I absolutely love the artwork! The colors are so vibrant and truly capture emotion."</p>
+        <p class="review-author">— Sarah J.</p>
+    </div>
+    <div class="review">
+        <p>"A stunning collection! Every piece tells a story. Can't wait to see more."</p>
+        <p class="review-author">— Mike T.</p>
+    </div>
+    <div class="review">
+        <p>"The best art website I’ve come across. The layouts are beautiful and the pieces are unique."</p>
+        <p class="review-author">— Emily R.</p>
+    </div>
+    <div class="review">
+        <p>"Great customer service and fast shipping! My new painting looks amazing in my living room."</p>
+        <p class="review-author">— Tom K.</p>
+    </div>
+    <a href="#more-reviews" class="more-reviews">See More Reviews</a>
 </div>
 </div>
 <footer>

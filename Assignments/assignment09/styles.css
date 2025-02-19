@@ -1,0 +1,64 @@
+body {
+    text-align: center; /* Center content */
+    background-color: bisque;
+}
+
+h1{
+    color: navy;
+}
+
+h2{
+    color: skyblue;
+}
+
+#ladder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.ladder-step {
+    width: 95%;
+    height: 5px;
+    background-color: rgb(24, 57, 115);
+    margin-bottom: 30px;
+    border: 2px solid rgb(89, 88, 162);
+}
+
+#ladder-rail-left, #ladder-rail-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: rgb(17, 45, 92);
+}
+
+#ladder-rail-left {
+    left: 0;
+}
+
+#ladder-rail-right {
+    right: 0;
+}
+
+
+#stickman {
+    transition: all 0.5s ease-in-out;
+}
+
+button, #climb-stairs{
+    display: block;
+    margin: 10px auto;  /* Centers horizontally */
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+footer{
+    margin-top: 80px;
+}
