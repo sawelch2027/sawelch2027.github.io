@@ -1,0 +1,94 @@
+/*Main structure */
+body{
+    background-color: blanchedalmond;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#main-content{
+    background-color: bisque;
+    width: 80%;
+    margin: auto;/*centers it*/
+    
+}
+#main-header{
+    background-color: rgb(207, 170, 138);
+    
+}
+#content{
+ padding: 10px;
+}
+#content h2{
+    text-align: center;
+}
+#gallery section{
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+#gallery section h3{
+    text-align: center;
+}
+#main-footer{
+padding-bottom: 10px;
+}
+p, h1{
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(64, 37, 2);
+}
+/*Navigation*/
+#main-nav ul{
+   padding-left: 0;/*remove indentations*/
+}
+#main-nav li{
+   list-style-type: none; /*remove bullets*/
+   background-color: beige;
+   padding: 5px;
+   text-align: center;
+   border-bottom: solid brown 2px;
+   
+}
+#main-nav a{
+    text-decoration: none; /*remove underline */
+    color: rgb(64, 37, 2);
+}
+#main-nav a:hover{
+    color: brown ;
+}
+/*Typography*/
+/*Larger Devices*/
+@media (min-width: 768px){
+    #main-nav ul{
+        display: flex;/*put them in columns*/
+    }
+    #main-nav li{
+        background-color: transparent;
+        flex: 1;
+        
+    }
+    #main-nav a{
+        text-decoration: none;
+        
+    }
+    #main-nav a:hover{
+        color: white;
+        border-bottom: 2px solid black;
+        
+    }
+    .columns{
+        display: flex;
+    }
+    .one{
+        flex: 1;
+    }
+    .two{
+        flex:2;
+    }
+    .three{
+        flex:3;
+    }
+    .four{
+        flex:4;
+    }
+}

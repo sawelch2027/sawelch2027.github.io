@@ -23,7 +23,7 @@ footer{
     max-width: 800px;
     margin:auto;
 }
-#assign1, #assign2 {
+#assign1, #assign2, #assign3, #project1 {
     background-color: rgb(48, 58, 94);
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */

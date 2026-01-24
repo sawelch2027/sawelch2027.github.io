@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f3de;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    color: #4f7f7f;
+    padding: 20px;
+}
+
+/* NAV BAR */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #d98989;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Top Row */
+#top-row {
+    display: flex;
+    margin: 20px;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* IMPORTANT TEXT (LEFT SIDE) */
+#important-text {
+    flex: 1;
+    color: #4f7f7f;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f4f3de;
+}
+
+/* TITLE COLUMNS */
+#title-columns {
+    flex: 4;
+    display: flex;
+    gap: 12px;
+}
+
+/* EACH TITLE + BOX COLUMN */
+.title-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers content-box under title-box */
+}
+
+/* TITLE BOX */
+.title-box {
+    width: 100%;
+    background-color: #5c8585;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* CONTENT BOX UNDER EACH TITLE */
+.content-box {
+    width: 100%;
+    min-height: 120px;
+    text-align: center;
+}
+
+.content-box img {
+    width: 200px;
+    height: 300px;
+}
+
+/* IDEA SECTIONS */
+.idea {
+    display: flex;
+    align-items: center;
+    background-color: #6f9595;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.idea.reverse {
+    background-color: #b7cfc7;
+    color: #2f4f4f;
+}
+
+.idea img {
+    width: 200px;
+    height: 200px;
+}
+
+.idea-text {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #d98989;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES  */
+@media (max-width: 900px) {
+    #top-row {
+        flex-direction: column;
+    }
+
+    #title-columns {
+        flex-direction: column;
+    }
+
+    .idea {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .idea img {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .idea img {
+        margin-top: 15px;
+        width: 200px;
+        height: 300px;
+    }
+}
