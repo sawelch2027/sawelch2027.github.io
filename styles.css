@@ -126,3 +126,25 @@ footer {
     margin:auto;
 }
 
+/* Container for assignments */
+.column, .column2 {
+    display: flex;
+    flex-direction: column; /* default: stacked for small screens */
+    gap: 20px;
+    align-items: center;
+}
+
+/* Large screen layout */
+@media (min-width: 900px) {
+    .column, .column2{
+        flex-direction: row;      /* side by side */
+        justify-content: center;  /* center the whole row */
+        align-items: stretch;
+    }
+
+    #assign1, #assign2, #assign3 {
+        width: 30%;               /* three boxes across */
+        max-width: none;
+    }
+}
+
