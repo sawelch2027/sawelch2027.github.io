@@ -142,7 +142,7 @@ footer {
         align-items: stretch;
     }
 
-    #assign1, #assign2, #assign3 {
+    #assign1, #assign2, #assign3, #project1{
         width: 30%;               /* three boxes across */
         max-width: none;
     }
