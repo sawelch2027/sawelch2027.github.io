@@ -1,0 +1,414 @@
+/* --- GLOBAL STYLES --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background-color: #000000; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#uppernav {
+    padding: 10px 40px;
+    background: #000;
+    text-align: left;
+}
+
+#uppernav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 13px;
+    border-right: 1px solid #444;
+}
+
+#uppernav a:last-child {
+    border-right: none;
+}
+
+#uppernav a:hover{
+
+    color: white;
+    background-color: darkred;
+    text-decoration: none;
+
+}
+
+#header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #000;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+#logo h1, .side-by-side h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#header-secondary {
+    background-color: #73000a; /* USC Garnet */
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+}
+
+#header-secondary a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#header-secondary img{
+    height: 20px;
+    width: 20px;
+    padding: 10px 10px;
+}
+
+#header-secondary a:hover {
+    background-color: rgb(105, 0, 0);
+    text-decoration: none;
+    padding: 1px 15px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+/* --- CONTENT SECTIONS --- */
+/* Pushes content down so it's not hidden under the fixed header */
+.main-section {
+    margin-top: 160px; 
+}
+
+.main-section img, .hero img, .hero2 img, .hero3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-section2 {
+    padding: 60px 10%;
+    background: white;
+    text-align: center;
+}
+
+.main-section2 h2 {
+    font-weight: normal;
+    line-height: 1.4;
+    color: #000;
+}
+
+/* Hero Overlays */
+.hero, .hero2, .hero3 {
+    position: relative;
+}
+
+.education, .research, .centers {
+    position: absolute;
+    bottom: 10%;
+    background-color: #73000a;
+    color: white;
+    padding: 40px;
+    width: 40%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.education { right: 5%; }
+.research, .centers { left: 5%; }
+
+.education button, .research button, .centers button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.education button:hover, .research button:hover, .centers button:hover {
+    background-color: white;
+    color: darkred;
+}
+
+/* --- TESTIMONIAL --- */
+.testimonial {
+    padding: 80px 0;
+    background: #f0f0f0;
+}
+
+.testimonial-card {
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px;
+    gap: 40px;
+    align-items: center;
+}
+
+.testimonial-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote h3 {
+    color: #73000a;
+    font-style: italic;
+}
+
+/* --- RESEARCH CARDS --- */
+.research-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 10%;
+}
+
+.research-card a {
+    color: #73000a;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+
+
+/* --- STAY CONNECTED --- */
+.stay-connected {
+    background: #f3f3f3;
+    padding: 60px 10% 40px;
+    text-align: center;
+}
+
+.stay-connected h2 {
+    color: #73000a;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stay-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    background: #73000a;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: darkred;
+    border: 2px solid darkred;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stay-bottom-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding-top: 40px;
+    gap: 30px;
+}
+
+.somc-title {
+    color: #73000a;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.somc-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.myscom-btn {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.link-grid a {
+    color: #73000a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.stay-col-right {
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+}
+
+.campus-link {
+    color: #73000a;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* USC MAIN FOOTER */
+.usc-footer {
+    background: #73000a;
+    color: white;
+    padding: 50px 10%;
+}
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    gap: 50px;
+}
+
+.footer-section h4 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.sub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Handles 2 columns in Offices & Divisions */
+.footer-section:nth-child(2) .sub-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/*phone display*/
+@media (max-width: 768px) {
+    
+    #uppernav, 
+    #header-secondary, 
+    #header-main .side-by-side,
+    #logo h1 {
+        display: none !important;
+    }
+
+  
+    header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        background-color: #000;
+    }
+
+    #header-main {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  
+    #logo img {
+        height: 40px;
+        margin: 0;
+    }
+
+    
+    .main-section {
+        margin-top: 60px; 
+    }
+
+    .education, .research, .centers {
+        position: relative;
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .research-links {
+        display: flex;
+        flex-direction: column; /* Stacks the cards vertically */
+        gap: 30px;
+        padding: 40px 5%; /* Reduces padding for smaller screens */
+    }
+
+    .research-card img {
+        width: 100%; /* Ensures images take up full width of the stack */
+        height: auto;
+    }
+
+
+    
+    .stay-bottom-row, .footer-grid, .sub-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stay-col-right {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding: 20px 0 0 0;
+    }
+}
