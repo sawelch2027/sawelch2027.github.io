@@ -23,7 +23,7 @@ footer{
     max-width: 800px;
     margin:auto;
 }
-#assign1, #assign2, #assign3, #assign4, #project1, #project2 {
+#assign1, #assign2, #assign3, #assign4, #assign5, #project1, #project2 {
     background-color: rgb(48, 58, 94);
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
@@ -127,7 +127,7 @@ footer {
 }
 
 /* Container for assignments */
-.column, .column2 {
+.column, .column2, .column3 {
     display: flex;
     flex-direction: column; /* default: stacked for small screens */
     gap: 20px;
@@ -136,15 +136,19 @@ footer {
 
 /* Large screen layout */
 @media (min-width: 900px) {
-    .column, .column2{
-        flex-direction: row;      /* side by side */
-        justify-content: center;  /* center the whole row */
+    .column, .column2, .column3 {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;      /* This is the magic key */
+        justify-content: center; 
         align-items: stretch;
+        gap: 20px;
     }
 
-    #assign1, #assign2, #assign3, #assign4, #project1, #project2{
-        width: 30%;               /* three boxes across */
+    #assign1, #assign2, #assign3, #assign4, #assign5, #project1, #project2 {
+        width: 30%; /* 30% width means 3 per row (30+30+30 = 90%) */
         max-width: none;
+        margin: 0;  /* Reset margin so flex gap handles the spacing */
     }
 }
 
