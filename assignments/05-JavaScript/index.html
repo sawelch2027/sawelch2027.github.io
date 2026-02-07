@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Examples</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>Introduction to JavaScript</header>
+    <h1>Savanna Welch CSCE 242 2026</h1>
+    
+    <div class="grid-container">
+        <div class="triangle-box">
+            <h3>Click the button to show/hide the triangle</h3>
+            <div class="triangle" id="myTriangle"></div>
+            <button onclick="toggleVisibility()">Toggle Triangle</button>
+        </div>
+    
+        <div class="picker-container">
+            <div class="header-row">
+                <h3>Select A Date:</h3>
+            </div>
+            <label for="date-select">Select A Date:</label>
+            <div class="input-group">
+                <input type="date" id="date-select" name="date-select">
+            </div>
+        </div>
+
+        <div class="main-wrapper" id="sunWrapper">
+            <h3>Frame Image</h3>
+            <div class="sun-content">
+                <img src="images/sun-character.png" alt="Sunny" class="sun-image">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p> &copy; SavannaWelch2026 CSCE242</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

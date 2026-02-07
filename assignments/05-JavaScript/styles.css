@@ -1,0 +1,106 @@
+/* Your existing General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(107, 174, 212);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(47, 86, 108);
+    color: white;
+    font-size: x-large;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+h1{
+    color:rgb(26, 49, 61);
+    font-size: large;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+
+.triangle-box, .picker-container, .main-wrapper {
+    background-color: #fdf6d0; 
+    border: 1px solid #c5d3b6;
+    padding: 20px;
+    width: 300px;
+    height: 350px; /* Uniform height */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(6, 4, 57);
+    display: none;
+    margin: 20px auto;
+}
+
+
+.main-wrapper {
+    cursor: pointer;
+    position: relative;
+    justify-content: flex-start; /* Title at top */
+}
+
+.sun-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.sun-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+.main-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 40px; 
+    width: 180px;
+    height: 180px;
+    border: 8px solid;
+    border-image: linear-gradient(to bottom right, red, green, blue, purple) 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+
+.main-wrapper.active::after {
+    opacity: 1;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(47, 86, 108);
+    color: white;
+    text-align: center;
+}
