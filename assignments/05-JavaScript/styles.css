@@ -106,10 +106,7 @@ footer {
 
 @media screen and (max-width: 950px) {
     .grid-container {
-        /* Change from 3 columns to 1 column */
         grid-template-columns: 1fr; 
-        
-        /* Optional: adjust padding for smaller screens */
         padding: 10px;
         gap: 15px;
     }
@@ -123,8 +120,6 @@ footer {
     }
     
     footer {
-        /* On mobile, fixed footers can block content. 
-           Consider making it relative so it stays at the end of the list */
         position: relative;
     }
 }
