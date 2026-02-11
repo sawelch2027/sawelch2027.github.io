@@ -1,0 +1,87 @@
+#gallery section{
+    background-color: aliceblue;
+    padding: 10px;
+    margin:10px;
+    min-width: 29%;
+    min-height: 250px;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+header, footer{
+    text-align: center;
+    color: aqua;
+    background-color: black;
+    padding: 10px 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+#ball-playground{
+    position: relative;
+}
+
+#ball{
+    width: 25px;
+    background-color: blue;
+    height: 25px;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.bounce{
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#p-plant-message{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    color: black;
+    font-size: larger;
+
+}
+
+label{
+background-color: black;
+color: aqua;
+padding: 10px;
+margin: 10px;
+border: aqua solid 2px;
+border-radius: 20px;
+}
+
+
+@keyframes bounce{
+    0%{
+        background-color: blue;
+        top:0px;
+    }
+    25%{
+        background-color: purple;
+    }
+    50%{
+        background-color: pink;
+        top:200px;
+    }
+    75%{
+        background-color: lightsalmon;
+    }
+    100%{
+        background-color: red;
+        top:0px;
+    }
+
+}
