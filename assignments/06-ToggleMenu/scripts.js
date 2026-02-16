@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         valueDisplay.textContent = val + " minutes";
 
-        // Logic for messages based on intervals
+        
         if (val > 45) {
             messageDisplay.textContent = "Let's have bacon and eggs! 🥓🍳";
         } else if (val >= 30) {
@@ -95,7 +95,7 @@ hamburger.onclick = () => {
     navMenu.classList.toggle("show");
 };
 
-// Optional: Close the menu when a link is clicked
+
 const navLinks = document.querySelectorAll(".nav-menu a");
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -106,10 +106,10 @@ navLinks.forEach(link => {
 });
 
 hamburger.onclick = () => {
-    // 1. Toggle the menu visibility
+    
     navMenu.classList.toggle("show");
 
-    // 2. Check if the menu is now shown
+    
     if (navMenu.classList.contains("show")) {
         hamburger.innerHTML = "&#9650;";
     } else {
@@ -121,7 +121,7 @@ navLinks.forEach(link => {
     link.addEventListener("click", () => {
         if (window.innerWidth <= 600) {
             navMenu.classList.remove("show");
-            // Reset the icon when a link is selected
+            
             hamburger.innerHTML = "&#9660;";
         }
     });

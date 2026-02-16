@@ -14,6 +14,28 @@ html, body{
 
 }
 
+#gallery{
+    display: flex;
+}
+
+.columns{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+.columns2{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+    width: 50%;
+    
+}
+
 header, footer{
     text-align: center;
     color: aqua;
@@ -84,4 +106,31 @@ border-radius: 20px;
         top:0px;
     }
 
+}
+
+#p-box{
+    background-color: black;
+    color: aqua;
+    height: auto;
+    width: fit-content;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+#p-box p{
+    text-align: center;
+    margin: 10px;
+}
+
+button{
+    background-color: black;
+    color: aqua;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: auto;
+}
+
+button:disabled{
+    background-color: grey;
 }

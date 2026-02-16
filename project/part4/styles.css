@@ -1,0 +1,419 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+header {
+    background: #0d1b2a;
+    padding: 15px 50px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-btn {
+    background: black;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(23, 48, 74, 0.8), rgba(4, 34, 66, 0.8)), url("images/Workout1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 60px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background: white;
+    color: #0d1b2a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+/* EXPLORE SECTION */
+.explore {
+    padding: 60px;
+    background: white;
+}
+
+.explore h2 {
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #e0e1dd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    background: #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* STAY UPDATED SECTION */
+.stay-updated {
+    background: url("images/Workout3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    background: rgba(33, 68, 106, 0.85);
+    padding: 80px 60px;
+}
+
+.updated-content {
+    color: white;
+    max-width: 600px;
+}
+
+.updated-content h2 {
+    margin-bottom: 25px;
+}
+
+.updated-content h4 {
+    margin-top: 20px;
+}
+
+.updated-content p {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    margin-top: 25px;
+}
+
+.secondary-btn {
+    background: black;
+    color: white;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.secondary-btn.light {
+    background: white;
+    color: black;
+}
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* =========================
+   TESTIMONIAL SECTION
+========================= */
+
+.testimonials {
+    background-color: #0b0b3b; /* dark navy */
+    padding: 70px 80px;
+    color: white;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.quote {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.description {
+    font-size: 13px;
+    color: gray;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 50px 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-brand h3 {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 70px;
+}
+
+.column h4 {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.column a {
+    display: block;
+    text-decoration: none;
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hide toggle on desktop */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle h2{
+    color: white;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu-toggle h2:hover{
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: #1b263b;
+        padding: 15px;
+        border-radius: 6px;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Stack header vertically */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 20px;
+        text-align: left;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    /* EXPLORE CARDS */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    /* STAY UPDATED */
+    .overlay {
+        padding: 60px 20px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* TESTIMONIALS STACK */
+    .testimonial-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonials {
+        padding: 50px 20px;
+    }
+
+    /* FOOTER STACK */
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+}

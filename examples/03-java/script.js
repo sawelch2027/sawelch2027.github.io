@@ -28,3 +28,27 @@ inputField.addEventListener('input', function(){
             this.parentElement.innerHTML = "you killed me";
         }
 })
+
+const p=document.getElementById("p-box");
+let count=0;
+let countInterval;
+const startButton = document.getElementById("btn-start-count");
+
+document.getElementById("btn-start-count").onclick = () => {
+    startButton.disabled = true;
+    countInterval = setInterval(()=>{
+        p.innerHTML = count ++;
+    },500); 
+};
+
+document.getElementById("btn-pause-count").onclick = () => {
+    startButton.disabled = false;
+    clearInterval(countInterval)
+};
+
+document.getElementById("btn-stop-count").onclick = () => {
+    startButton.disabled = false;
+    count = 0;
+    clearInterval(countInterval)
+};
+
