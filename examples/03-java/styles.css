@@ -14,8 +14,8 @@ html, body{
 
 }
 
-#gallery{
-    display: flex;
+ul, p{
+    color: black;
 }
 
 .columns{
