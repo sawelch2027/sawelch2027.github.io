@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 
-/* HEADER */
+
 header {
     background: #0d1b2a;
     padding: 15px 50px;
@@ -199,9 +199,6 @@ nav a {
     background: white;
     color: black;
 }
-/* =========================
-   GLOBAL
-========================= */
 
 * {
     margin: 0;
@@ -215,9 +212,7 @@ body {
     color: #222;
 }
 
-/* =========================
-   TESTIMONIAL SECTION
-========================= */
+/*testimonial*/
 
 .testimonials {
     background-color: #0b0b3b; /* dark navy */
@@ -272,9 +267,7 @@ body {
     color: gray;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/*footrt*/
 
 footer {
     background-color: #f4f4f4;
@@ -471,9 +464,7 @@ footer {
         padding: 40px 20px;
     }
 }
-/* =========================
-   WORKOUT PAGE ONLY 
-========================= */
+/*workout*/
 
 .workouts-page {
     background: #fff;
@@ -513,9 +504,7 @@ footer {
     line-height: 1.6;
 }
 
-/* =========================
-   HERO 
-========================= */
+/*hero*/
 
 .workout-hero {
     background: url("images/Workout1.jpg") center/cover no-repeat;
@@ -564,9 +553,7 @@ footer {
     font-weight: 700;
 }
 
-/* =========================
-   BUTTONS (match screenshot)
-========================= */
+/*buttons*/
 
 .btn-dark,
 .btn-light {
@@ -588,9 +575,7 @@ footer {
     color: #111;
 }
 
-/* =========================
-   FEATURED PLANS GRID
-========================= */
+/*featured plans*/
 
 .featured-grid {
     display: grid;
@@ -614,7 +599,7 @@ footer {
 }
 
 .featured-card--text {
-    background: #17175b; /* deep navy like screenshot */
+    background: #17175b; 
     color: #fff;
     padding: 14px 14px;
     display: flex;
@@ -640,9 +625,7 @@ footer {
     gap: 8px;
 }
 
-/* =========================
-   FOCUS SECTION GRID
-========================= */
+/*focus section*/
 
 .focus-grid {
     display: grid;
@@ -664,7 +647,7 @@ footer {
     display: block;
 }
 
-/* Big left card has bar at bottom */
+
 .focus-card--big {
     position: relative;
     height: 260px;
@@ -705,7 +688,7 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Right side stack */
+
 .focus-right {
     display: flex;
     flex-direction: column;
@@ -773,9 +756,7 @@ footer {
     color: #666;
 }
 
-/* =========================
-   TARGET REGION (2 columns)
-========================= */
+
 
 .target-grid {
     display: grid;
@@ -817,9 +798,7 @@ footer {
   color: white;
 }
 
-/* =========================
-   MOBILE MATCH (like screenshot)
-========================= */
+
 
 @media (max-width: 768px) {
     .workout-wrap {
@@ -861,16 +840,12 @@ footer {
     }
 }
 
-/* =========================
-   NUTRITION PAGE ONLY
-   (Does not change header/footer)
-========================= */
+
 
 .nutrition-page {
   background: #ffffff;
 }
 
-/* Full-width section spacing like your screenshot */
 .nutri-section {
   padding: 32px 60px;
 }
@@ -883,9 +858,7 @@ footer {
   margin-bottom: 18px;
 }
 
-/* =========================
-   HERO (dark block + image)
-========================= */
+
 
 .nutri-hero {
   background: #0b0b3b;
@@ -945,9 +918,7 @@ footer {
   margin-bottom: 16px;
 }
 
-/* =========================
-   CHOOSE YOUR GOAL (3 cards)
-========================= */
+
 
 .goal-grid {
   display: grid;
@@ -1055,7 +1026,7 @@ footer {
   gap: 18px;
 }
 
-/* Make the “middle” one feel more prominent */
+
 .menu-card.featured {
   transform: translateY(-8px);
 }
@@ -1095,14 +1066,12 @@ footer {
   text-decoration: none;
 }
 
-/* Small row under the 3 cards (Snack card) */
+
 .menu-grid .menu-card:nth-child(4) {
   grid-column: 1 / span 1;
 }
 
-/* =========================
-   MOBILE
-========================= */
+
 
 @media (max-width: 768px) {
   .nutri-section,
@@ -1142,14 +1111,10 @@ footer {
   }
 }
 
-/* =========================
-   ABOUT US PAGE ONLY
-   (Does NOT change header/footer)
-========================= */
 
 .about-page{
   background: #ffffff;
-  padding: 28px 60px 40px 60px; /* matches screenshot spacing */
+  padding: 28px 60px 40px 60px;
 }
 
 /* TOP layout */
@@ -1186,7 +1151,7 @@ footer {
 .about-top__right img{
   width: 100%;
   height: auto;        /* keeps full portrait */
-  max-height: 320px;   /* controls size so it matches design */
+  max-height: 320px;   
   object-fit: contain; /* ensures no crop */
   border-radius: 6px;
   display: block;
@@ -1272,7 +1237,7 @@ footer {
   background: #0b0b3b;
   border-radius: 6px;
   padding: 14px;
-  height: 220px;            /* matches screenshot */
+  height: 220px;          
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1281,13 +1246,11 @@ footer {
 .about-visual img{
   width: 100%;
   height: 100%;
-  object-fit: contain;      /* keeps the icon crisp */
+  object-fit: contain;      
   display: block;
 }
 
-/* =========================
-   MOBILE
-========================= */
+
 @media (max-width: 768px){
   .about-page{
     padding: 22px 20px 30px 20px;
@@ -1314,10 +1277,7 @@ footer {
   }
 }
 
-/* =========================
-   ASSESSMENT PAGE ONLY
-   (does not change header/footer)
-========================= */
+
 
 .assessment-page{
   background: #ffffff;
@@ -1431,7 +1391,7 @@ footer {
   max-width: 340px;
 }
 
-/* highlight block like screenshot */
+
 .assistant-card .hl{
   background: #dbe7ff;
   padding: 2px 4px;
@@ -1440,9 +1400,7 @@ footer {
   color: #0b0b3b;
 }
 
-/* =========================
-   MOBILE
-========================= */
+
 @media (max-width: 768px){
   .assessment-page{
     padding: 22px 20px 30px 20px;
