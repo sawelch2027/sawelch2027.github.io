@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DiveFitness</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- HEADER (DO NOT CHANGE) -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+        <h1>DiveFitness</h1>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <h2>Menu ▼</h2>
+      </div>
+
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="assessments.html">Assessment</a></li>
+          <li><a href="homepage.html" class="login-btn">Log In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       ASSESSMENT PAGE MAIN BODY
+       (New, with IDs + tab buttons)
+  ========================== -->
+  <main class="assessment-page">
+
+    <section class="assessment-grid">
+
+      <!-- LEFT: Body Metrics card -->
+      <div class="metrics-card">
+        <div class="metrics-top">
+          <h2>Body Metrics</h2>
+
+          <div class="unit-tabs">
+            <button id="btn-imperial" class="unit-tab active" type="button">Imperial</button>
+            <button id="btn-metric" class="unit-tab" type="button">Metric</button>
+          </div>
+        </div>
+
+        <form class="metrics-form">
+
+          <label id="label-age">
+            Age:
+            <input id="input-age" type="text" placeholder="">
+          </label>
+
+          <label id="label-height">
+            Height (inches):
+            <input id="input-height" type="text" placeholder="">
+          </label>
+
+          <label id="label-weight">
+            Weight (lbs):
+            <input id="input-weight" type="text" placeholder="">
+          </label>
+
+          <label id="label-gender">
+            Gender:
+            <input id="input-gender" type="text" placeholder="">
+          </label>
+
+          <label id="label-activity">
+            Activity Level:
+            <input id="input-activity" type="text" placeholder="">
+          </label>
+
+          <label id="label-goal">
+            Primary Goal:
+            <input id="input-goal" type="text" placeholder="">
+          </label>
+
+        </form>
+      </div>
+
+      <!-- RIGHT: Personal Assistant card -->
+      <div class="assistant-card">
+        <h2>Your Personal<br>Assistant</h2>
+        <p>
+          Understanding your body is the first step. Enter your details to get a
+          <span class="hl">personalized breakdown</span> of your calorie needs and your
+          macro targets.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER (DO NOT CHANGE) -->
+  <footer>
+
+    <div class="footer-container">
+
+      <!-- Left -->
+      <div class="footer-brand">
+        <h3>Dive Fitness</h3>
+
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+
+      <!-- Columns -->
+      <div class="footer-links">
+            <div class="column">
+                <h4>Workouts</h4>
+                <a href="workouts.html">HIIT</a>
+                <a href="workouts.html">Stretch</a>
+                <a href="workouts.html">Strength</a>
+            </div>
+
+            <div class="column">
+                <h4>Nutrition</h4>
+                <a href="nutrition.html">Weight Gain</a>
+                <a href="nutrition.html">Weight loss</a>
+                <a href="nutrition.html">Maintain</a>
+            </div>
+
+            <div class="column">
+                <h4>Assessments</h4>
+                <a href="aboutus.html">Why do I need an Assessment?</a>
+                <a href="aboutus.html">How do I take my measurements?</a>
+                <a href="assessments.html">Measurement Conversion</a>
+            </div>
+        </div>
+
+    <div class="footer-bottom">
+      © 2026 Dive Fitness. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DiveFitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <h1>DiveFitness</h1>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <h2>Menu ▼</h2>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="assessments.html">Assessment</a></li>
+                <li><a href="homepage.html" class="login-btn">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="about-page">
+
+  <!-- TOP: About text + image -->
+  <section class="about-top">
+    <div class="about-top__left">
+      <h2>About Us</h2>
+
+      <p class="about-founder">Founder: Savanna Welch</p>
+
+      <p>
+        Welcome to Dive Fitness, a platform born from a lifelong commitment to discipline, strength, and the pursuit of physical excellence. My journey began in high school, where I first discovered the importance of consistency, accountability, and the mental clarity that comes with a committed daily routine.
+      </p>
+
+      <p>
+        I proudly serve in a deeply structured training environment in NROTC, which taught me the value of intentional routines and leadership through consistency. Today, I use that same mindset to bring workouts and nutrition resources to those who want a stronger foundation and a plan they can trust.
+      </p>
+
+      <p>
+        Dive Fitness is built on intentional, science-backed guidance that helps you stay accountable and make progress you can actually measure.
+      </p>
+    </div>
+
+    <div class="about-top__right">
+      <img src="images/Beach Vanna.jpg" alt="Founder photo">
+    </div>
+  </section>
+
+  <!-- BOTTOM: Contact + chart -->
+  <section class="about-bottom">
+    <div class="about-contact">
+      <h3>Contact me</h3>
+
+      <form class="contact-form" action="#" method="post">
+        <label for="contact-name">Your name</label>
+        <input id="contact-name" type="text" placeholder="Your name">
+
+        <div class="two-col">
+          <div>
+            <label for="contact-email">Email</label>
+            <input id="contact-email" type="email" placeholder="Email">
+          </div>
+
+          <div>
+            <label for="contact-topic">Topic</label>
+            <input id="contact-topic" type="text" placeholder="Topic">
+          </div>
+        </div>
+
+        <label for="contact-msg">Message</label>
+        <textarea id="contact-msg" rows="4" placeholder="Type your message..."></textarea>
+
+        <button class="contact-btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="about-visual">
+      <img src="images/logo.png" alt="Heartbeat chart">
+    </div>
+  </section>
+
+</main>
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-brand">
+            <h3>Dive Fitness</h3>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+        <!-- Columns -->
+        <div class="footer-links">
+            <div class="column">
+                <h4>Workouts</h4>
+                <a href="workouts.html">HIIT</a>
+                <a href="workouts.html">Stretch</a>
+                <a href="workouts.html">Strength</a>
+            </div>
+
+            <div class="column">
+                <h4>Nutrition</h4>
+                <a href="nutrition.html">Weight Gain</a>
+                <a href="nutrition.html">Weight loss</a>
+                <a href="nutrition.html">Maintain</a>
+            </div>
+
+            <div class="column">
+                <h4>Assessments</h4>
+                <a href="aboutus.html">Why do I need an Assessment?</a>
+                <a href="aboutus.html">How do I take my measurements?</a>
+                <a href="assessments.html">Measurement Conversion</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+    © 2026 Dive Fitness. All rights reserved.
+    </div>
+
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

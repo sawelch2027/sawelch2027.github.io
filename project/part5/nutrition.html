@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DiveFitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <h1>DiveFitness</h1>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <h2>Menu ▼</h2>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="assessments.html">Assessment</a></li>
+                <li><a href="homepage.html" class="login-btn">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="nutrition-page">
+
+  <!-- HERO -->
+  <section class="nutri-hero">
+    <div class="nutri-hero__inner">
+      <div class="nutri-hero__text">
+        <h2>Fuel Your Ambition</h2>
+        <p>
+          Proper nutrition is one of your results’ secret weapons. Our meal plans
+          balance all your macros: high protein, efficient fats, and carbs designed
+          to support pacing and results.
+        </p>
+      </div>
+
+      <div class="nutri-hero__cta">
+        <a class="nutri-cta-btn" href="assessments.html">Get my Assessment →</a>
+      </div>
+    </div>
+
+    <div class="nutri-hero__image">
+      <img src="images/nutrition1.jpg" alt="Meal prep containers">
+    </div>
+  </section>
+
+  <!-- CHOOSE YOUR GOAL -->
+  <section class="nutri-section">
+    <h2 class="nutri-title">Choose Your Goal</h2>
+
+    <div class="goal-grid">
+      <article class="goal-card">
+        <img src="images/weightloss1.jpg" alt="Weight loss goal">
+        <h3>Weight Loss</h3>
+        <p>
+          Target fat loss, not your strength. We use high-volume meals and
+          balanced protein to keep you full and consistent.
+        </p>
+      </article>
+
+      <article class="goal-card">
+        <img src="images/Nutrition3.jpg" alt="Maintain goal">
+        <h3>Maintain</h3>
+        <p>
+          Keep performance high while staying lean. Learn how to hit daily macros
+          without overthinking meal timing.
+        </p>
+      </article>
+
+      <article class="goal-card">
+        <img src="images/Muscle.jpg" alt="Weight gain goal">
+        <h3>Weight Gain</h3>
+        <p>
+          Build muscle efficiently with surplus-focused meals that prioritize
+          protein and smart carb sources for training fuel.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CALCULATE YOUR MACROS -->
+  <section class="macro-section">
+    <div class="macro-inner">
+      <div class="macro-left">
+        <h2>Calculate Your Macros</h2>
+        <p>
+          Not sure exactly what you need? Our advanced macro calculator takes your
+          age, weight, activity level, and goals to give you the perfect numbers.
+        </p>
+
+        <div class="macro-actions">
+          <a class="macro-btn dark" href="assessments.html">Open Calculator →</a>
+          <a class="macro-btn light" href="homepage.html">Sign Up</a>
+        </div>
+      </div>
+
+      <div class="macro-right">
+        <img src="images/Nutrition2.jpg" alt="Nutrition collage">
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLE DAILY MENU -->
+  <section class="nutri-section">
+    <h2 class="nutri-title">Example Daily Menu</h2>
+
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="images/greek yogurt.jpg" alt="Breakfast">
+        <div class="menu-text">
+          <h3>Breakfast</h3>
+          <p>
+            Greek yogurt bowl with fruit + granola. High protein, quick, and
+            great for busy mornings.
+          </p>
+        </div>
+        <a class="menu-link" href="#">Quick Breakfast →</a>
+      </article>
+
+      <article class="menu-card featured">
+        <img src="images/avocado wrap.jpg" alt="Lunch">
+        <div class="menu-text">
+          <h3>Lunch</h3>
+          <p>
+            Chicken + rice + veggies with a simple sauce. Balanced macros that
+            keep energy steady.
+          </p>
+        </div>
+        <a class="menu-link" href="#">Balanced Lunch →</a>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/quinoa bowl.jpg" alt="Dinner">
+        <div class="menu-text">
+          <h3>Dinner</h3>
+          <p>
+            Lean protein + roasted potatoes + greens. Easy to scale up or down
+            depending on your goal.
+          </p>
+        </div>
+        <a class="menu-link" href="#">Simple Dinner →</a>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/protien shake.jpg" alt="Snack">
+        <div class="menu-text">
+          <h3>Snack</h3>
+          <p>
+            Protein shake + banana or a cottage cheese snack plate. Quick fuel
+            without feeling heavy.
+          </p>
+        </div>
+        <a class="menu-link" href="#">Snack Ideas →</a>
+      </article>
+    </div>
+  </section>
+
+</main>
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-brand">
+            <h3>Dive Fitness</h3>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+        <!-- Columns -->
+        <div class="footer-links">
+            <div class="column">
+                <h4>Workouts</h4>
+                <a href="workouts.html">HIIT</a>
+                <a href="workouts.html">Stretch</a>
+                <a href="workouts.html">Strength</a>
+            </div>
+
+            <div class="column">
+                <h4>Nutrition</h4>
+                <a href="nutrition.html">Weight Gain</a>
+                <a href="nutrition.html">Weight loss</a>
+                <a href="nutrition.html">Maintain</a>
+            </div>
+
+            <div class="column">
+                <h4>Assessments</h4>
+                <a href="aboutus.html">Why do I need an Assessment?</a>
+                <a href="aboutus.html">How do I take my measurements?</a>
+                <a href="assessments.html">Measurement Conversion</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+    © 2026 Dive Fitness. All rights reserved.
+    </div>
+
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

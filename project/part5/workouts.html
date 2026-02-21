@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DiveFitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <h1>DiveFitness</h1>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <h2>Menu ▼</h2>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="assessments.html">Assessment</a></li>
+                <li><a href="homepage.html" class="login-btn">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="workouts-page">
+
+  <!-- HERO -->
+  <section class="workout-hero">
+    <div class="workout-hero__overlay">
+      <div class="workout-hero__content">
+        <h2>Sculpt Your Ideal Body</h2>
+        <p>
+          Minimal workout plans designed for maximum efficiency. No fluff, just
+          results. Follow the plan, transform your life.
+        </p>
+        <a class="workout-hero__btn" href="#">Let’s Do It!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PLANS -->
+  <section class="workout-section">
+    <div class="workout-wrap">
+      <h2 class="workout-title">Featured Plans</h2>
+
+      <div class="featured-grid">
+        <!-- Row 1 -->
+        <div class="featured-card featured-card--text">
+          <h3>Strength Mastery</h3>
+          <p>
+            Build real muscle with this comprehensive 8-week strength training
+            program using free weights.
+          </p>
+          <div class="featured-actions">
+            <a class="btn-dark" href="#">Begin →</a>
+            <a class="btn-light" href="#">Bookmark</a>
+          </div>
+        </div>
+
+        <div class="featured-card featured-card--image">
+          <img src="images/strength.jpg" alt="Strength training">
+        </div>
+
+        <!-- Row 2 -->
+        <div class="featured-card featured-card--image">
+          <img src="images/HIIT.jpg" alt="HIIT cardio">
+        </div>
+
+        <div class="featured-card featured-card--text">
+          <h3>HIIT Cardio Blast</h3>
+          <p>
+            High-intensity interval training to burn fat efficiently and
+            accelerate health in record time.
+          </p>
+          <div class="featured-actions">
+            <a class="btn-dark" href="#">Begin →</a>
+            <a class="btn-light" href="#">Bookmark</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS ON YOUR BODY -->
+  <section class="workout-section">
+    <div class="workout-wrap">
+      <h2 class="workout-title">Focus on your Body</h2>
+      <p class="workout-subtext">
+        Recovery is just as important as the workout itself. Explore our library
+        of guided stretching and yoga routines designed to improve flexibility,
+        reduce soreness, and prevent injury.
+      </p>
+
+      <div class="focus-grid">
+        <!-- Left big card -->
+        <div class="focus-card focus-card--big">
+          <img src="images/stretch.jpg" alt="Morning mobility session">
+          <div class="focus-card__bar">
+            <div>
+              <h3>Morning Mobility Session</h3>
+              <p>Beginner · 10 min</p>
+            </div>
+            <div class="focus-actions">
+              <a class="btn-dark" href="#">Begin →</a>
+              <a class="btn-light" href="#">Bookmark</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="focus-right">
+          <!-- Top right card -->
+          <div class="focus-card focus-card--stack">
+            <img src="images/Workout 4.jpg" alt="Deep tissue release">
+            <div class="focus-card__stacktext">
+              <h3>Deep Tissue Release</h3>
+              <p>Beginner · 15 min</p>
+            </div>
+          </div>
+
+          <!-- Bottom right two mini cards -->
+          <div class="mini-grid">
+            <div class="mini-card">
+              <img src="images/yoga 2.jpg" alt="Bed time yoga">
+              <div class="mini-card__text">
+                <h4>Bed Time Yoga</h4>
+                <p>Beginner · 10 min</p>
+              </div>
+            </div>
+
+            <div class="mini-card">
+              <img src="images/yoga 1.jpg" alt="Bed time yoga stretch">
+              <div class="mini-card__text">
+                <h4>Bed Time Yoga</h4>
+                <p>Beginner · 10 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TARGET REGION -->
+  <section class="workout-section workout-section--tight">
+    <div class="workout-wrap">
+      <h2>Target Region</h2>
+
+      <div class="target-grid">
+        <div class="target-item">
+          <div class="target-icon">🍎</div>
+          <div>
+            <h3>Abs</h3>
+            <p>
+              This section strengthens the waist, obliques, and core. Workouts
+              are designed for steady toning and controlled movement.
+            </p>
+          </div>
+        </div>
+
+        <div class="target-item">
+          <div class="target-icon">💪</div>
+          <div>
+            <h3>Upper Body</h3>
+            <p>
+              Build strength and shape the chest, arms, shoulders, and back with
+              guided training routines using weights or bodyweight.
+            </p>
+          </div>
+        </div>
+
+        <div class="target-item">
+          <div class="target-icon">🔥</div>
+          <div>
+            <h3>Lower Body</h3>
+            <p>
+              Strengthen glutes, hamstrings, quads, and calves with workouts that
+              focus on stability, power, and endurance.
+            </p>
+          </div>
+        </div>
+
+        <div class="target-item">
+          <div class="target-icon">🌶️</div>
+          <div>
+            <h3>Full Body</h3>
+            <p>
+              For when you want results everywhere. These workouts mix major
+              muscle groups to maximize efficiency and overall conditioning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-brand">
+            <h3>Dive Fitness</h3>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+        <!-- Columns -->
+        <div class="footer-links">
+            <div class="column">
+                <h4>Workouts</h4>
+                <a href="workouts.html">HIIT</a>
+                <a href="workouts.html">Stretch</a>
+                <a href="workouts.html">Strength</a>
+            </div>
+
+            <div class="column">
+                <h4>Nutrition</h4>
+                <a href="nutrition.html">Weight Gain</a>
+                <a href="nutrition.html">Weight loss</a>
+                <a href="nutrition.html">Maintain</a>
+            </div>
+
+            <div class="column">
+                <h4>Assessments</h4>
+                <a href="aboutus.html">Why do I need an Assessment?</a>
+                <a href="aboutus.html">How do I take my measurements?</a>
+                <a href="assessments.html">Measurement Conversion</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+    © 2026 Dive Fitness. All rights reserved.
+    </div>
+
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
