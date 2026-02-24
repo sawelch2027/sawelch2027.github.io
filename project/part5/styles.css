@@ -12,7 +12,10 @@ body {
     line-height: 1.6;
 }
 
-
+.page-wrap{
+  width: min(80vw, 1200px);
+  margin: 0 auto;
+}
 
 header {
     background: #0d1b2a;
@@ -63,6 +66,25 @@ nav a {
     background-position: center;
     color: white;
     padding: 100px 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* key */
+    align-items: center;
+    
+}
+
+.left-logo{
+  align-items: center;
+  max-width: fit-content;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  padding: 22px;
+  filter:brightness(20px);
+}
+
+.left-logo img{
+  width: 590px;
+  height: 340px;
+  opacity: 0.5;
 }
 
 .hero-content {
@@ -166,20 +188,30 @@ nav a {
 }
 
 .updated-content {
-    color: white;
-    max-width: 600px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* key */
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.updated-content h2 {
-    margin-bottom: 25px;
+.updated-content h2{
+  margin-bottom: 20px;
 }
 
-.updated-content h4 {
-    margin-top: 20px;
+.updated-content h4{
+  margin-top: 18px;
+  margin-bottom: 4px;
 }
 
-.updated-content p {
-    margin-bottom: 10px;
+.updated-content p{
+  margin-bottom: 12px;
+}
+
+.updated-left{
+  max-width: 560px; /* keeps text readable */
 }
 
 .button-group {
@@ -198,6 +230,42 @@ nav a {
 .secondary-btn.light {
     background: white;
     color: black;
+}
+
+/* right card */
+.newsletter-card{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 22px;
+  backdrop-filter: blur(4px);
+  align-self: center; /* keeps card from stretching tall */
+}
+
+.newsletter-card h4{
+  margin-bottom: 8px;
+}
+
+.newsletter-form{
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.newsletter-form input{
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.newsletter-form button{
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 * {
@@ -470,6 +538,11 @@ footer {
     background: #fff;
 }
 
+.workouts-page .featured-card{
+  height: auto;                 /* remove the tiny fixed height */
+  aspect-ratio: 16 / 5;         /* wide banner, feels fuller */
+}
+
 .workout-wrap {
     width: 100%;
     max-width: 100%;
@@ -590,12 +663,12 @@ footer {
     height: 120px;
 }
 
-.featured-card--image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    object-position: center 40%;
+.workouts-page .featured-card--image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
 }
 
 .featured-card--text {
@@ -627,11 +700,12 @@ footer {
 
 /*focus section*/
 
-.focus-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 18px;
-    margin-top: 12px;
+.focus-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  margin-top: 12px;
+  align-items: stretch; /* KEY */
 }
 
 .focus-card {
@@ -648,9 +722,10 @@ footer {
 }
 
 
-.focus-card--big {
-    position: relative;
-    height: 260px;
+.focus-card--big{
+  position: relative;
+  height: 100%;       /* stretch to match right */
+  min-height: 314px;  /* equals 150 + 14 gap + 150 (right column total) */
 }
 
 .focus-card--big img {
@@ -689,19 +764,24 @@ footer {
 }
 
 
-.focus-right {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+.focus-right{
+  display: grid;
+  grid-template-rows: 150px 150px; /* top stack + bottom area */
+  gap: 14px;
 }
 
-.focus-card--stack {
-    height: 150px;
-    background: #17175b;
+.focus-card--stack{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  background: #17175b;
 }
 
-.focus-card--stack img {
-    height: 105px;
+.focus-card--stack img{
+  width: 100%;
+  height: 105px;
+  object-fit: cover;
+  display: block;
 }
 
 .focus-card__stacktext {
@@ -772,10 +852,14 @@ footer {
     align-items: start;
 }
 
-.target-icon {
-    font-size: 16px;
-    line-height: 1;
-    margin-top: 2px;
+.workouts-page .target-icon{
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #e9eaee;
+  font-size: 16px;
 }
 
 .target-item h3 {
