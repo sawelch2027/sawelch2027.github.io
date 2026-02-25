@@ -72,20 +72,6 @@ nav a {
     
 }
 
-.left-logo{
-  align-items: center;
-  max-width: fit-content;
-  border: solid 2px transparent;
-  border-radius: 20px;
-  padding: 22px;
-  filter:brightness(20px);
-}
-
-.left-logo img{
-  width: 590px;
-  height: 340px;
-  opacity: 0.5;
-}
 
 .hero-content {
     max-width: 600px;
@@ -431,6 +417,22 @@ footer {
     cursor: pointer;
 }
 
+.left-logo{
+  align-items: center;
+  max-width: fit-content;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  padding: 22px;
+  filter:brightness(20px);
+  display: block;
+}
+
+.left-logo img{
+  width: 590px;
+  height: 340px;
+  opacity: 0.5;
+  display: block;
+}
 
 @media (max-width: 768px) {
 
@@ -476,10 +478,16 @@ footer {
     .hero {
         padding: 60px 20px;
         text-align: left;
+        grid-template-columns: 1fr;
+
     }
 
     .hero h2 {
         font-size: 26px;
+    }
+
+    .hero-content{
+      text-align: center;
     }
 
     /* EXPLORE CARDS */
@@ -531,6 +539,14 @@ footer {
     footer {
         padding: 40px 20px;
     }
+
+    .left-logo{
+  display: none;
+}
+
+.left-logo img{
+  display: none;
+}
 }
 /*workout*/
 
@@ -715,17 +731,19 @@ footer {
 }
 
 .focus-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+.focus-card--big img { height: 100%; }
+.focus-card--stack img { height: 105px; }
+.mini-card img { height: 85px; }
 
 .focus-card--big{
   position: relative;
-  height: 100%;       /* stretch to match right */
-  min-height: 314px;  /* equals 150 + 14 gap + 150 (right column total) */
+  height: 100%;
+  min-height: 320px; /* just a nice minimum */
 }
 
 .focus-card--big img {
@@ -766,7 +784,7 @@ footer {
 
 .focus-right{
   display: grid;
-  grid-template-rows: 150px 150px; /* top stack + bottom area */
+  grid-template-rows: 150px auto; /* stack fixed, mini-grid grows */
   gap: 14px;
 }
 
@@ -800,11 +818,26 @@ footer {
     opacity: 0.9;
 }
 
-/* Two mini cards */
-.mini-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+/* Meta row used across all cards */
+.workout-meta{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  opacity: 0.9;
+  font-size: 10px; /* matches your current design */
+  line-height: 1.1;
+}
+
+.legend{
+  font-size: 12px; /* subtle, not huge */
+  line-height: 1;
+}
+
+.mini-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .mini-card {
@@ -944,11 +977,99 @@ footer {
 
 
 
-.nutri-hero {
-  background: #0b0b3b;
-  color: #fff;
-  padding: 26px 60px 24px 60px; 
+.nutrition-hero{
+  background: url("images/nutrition1.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
+
+.nutrition-overlay{
+  background: rgba(8, 15, 45, 0.82);
+  padding: 50px 60px;
+}
+
+.nutrition-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.nutrition-copy h2{
+  margin: 0 0 10px;
+  color: white;
+}
+
+.nutrition-copy p{
+  margin: 0;
+  max-width: 700px;
+  opacity: 0.92;
+  color: white;
+}
+.primary-btn{
+  background: white;
+  color: #0b0f3a;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Macro cards overlay grid */
+.macro-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.macro-card{
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+  backdrop-filter: blur(6px);
+}
+
+.macro-card h4{
+  margin: 0 0 6px;
+  color: white;
+}
+
+.macro-card p{
+  margin: 0 0 10px;
+  opacity: 0.92;
+  color:white;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.macro-card ul{
+  margin: 0;
+  padding-left: 18px;
+  opacity: 0.95;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.macro-card li{
+  margin-bottom: 4px;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .nutrition-overlay{ padding: 40px 25px; }
+  .macro-cards{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+  .nutrition-top{ flex-direction: column; align-items: flex-start; }
+  .macro-cards{ grid-template-columns: 1fr; }
+}
+
 
 .nutri-hero__inner {
   display: flex;
@@ -998,8 +1119,8 @@ footer {
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 4px;
   margin-bottom: 16px;
+  
 }
 
 
