@@ -1,9 +1,9 @@
-/* ====== Base ====== */
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #efefef;
+  background: #c9bbbb;
   color: #222;
 }
 
@@ -33,7 +33,6 @@ body {
   color: #c94f6a;
 }
 
-/* ====== Gallery ====== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(180px, 1fr));
@@ -91,7 +90,6 @@ body {
   display: block;
 }
 
-/* ====== Modal ====== */
 .modal {
   position: fixed;
   inset: 0;

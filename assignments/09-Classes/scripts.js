@@ -45,7 +45,7 @@ class Song {
     return card;
   }
 
-  // Helper method: fill modal with this song's data
+  //fill modal with this song's data
   fillModal(modalEls) {
     modalEls.title.textContent = this.title;
     modalEls.artist.textContent = `by ${this.artist}`;
@@ -98,7 +98,7 @@ const songs = [
   )
 ];
 
-/* ====== DOM Helpers ====== */
+
 const gallery = document.getElementById("gallery");
 
 const modal = document.getElementById("songModal");
@@ -134,7 +134,6 @@ function closeModal() {
   modalEls.iframe.src = "";
 }
 
-/* ====== Events ====== */
 closeModalBtn.addEventListener("click", closeModal);
 
 // click outside dialog closes
@@ -147,5 +146,4 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
 });
 
-/* ====== Start ====== */
 renderGallery();
