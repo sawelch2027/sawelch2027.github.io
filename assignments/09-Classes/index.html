@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Time</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="page">
+    <section class="wrap">
+      <h1 class="title">Classes</h1>
+      <p class="subtitle">Music Time</p>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="songModal" class="modal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="closeModalBtn" class="modal__close" aria-label="Close modal">×</button>
+
+      <div class="modal__content">
+        <div class="modal__video">
+          <iframe
+            id="modalIframe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <aside class="modal__info">
+          <h2 id="modalTitle" class="modal__song-title">Song Title</h2>
+          <p id="modalArtist" class="modal__artist">by Artist</p>
+
+          <div class="modal__meta">
+            <p><span>Album:</span> <span id="modalAlbum"></span></p>
+            <p><span>Year:</span> <span id="modalYear"></span></p>
+            <p><span>Genre:</span> <span id="modalGenre"></span></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
