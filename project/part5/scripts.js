@@ -1,6 +1,4 @@
-// =========================
-// NAV MENU TOGGLE
-// =========================
+//nav menu//
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   if (!nav) return;
@@ -8,10 +6,7 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  // =========================
-  // IMPERIAL / METRIC TOGGLE (Assessment page only)
-  // =========================
+// imperial and metric //
   const imperialBtn = document.getElementById("btn-imperial");
   const metricBtn   = document.getElementById("btn-metric");
   const labelHeight = document.getElementById("label-height");
@@ -33,46 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // =========================
-  // BOOKMARK STORAGE
-  // =========================
-  function slugify(text) {
-    return String(text)
-      .toLowerCase()
-      .trim()
-      .replace(/['"]/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-  }
-
-  function getBookmarks() {
-    try {
-      const raw = localStorage.getItem("df_bookmarks");
-      return raw ? JSON.parse(raw) : [];
-    } catch {
-      return [];
-    }
-  }
-
-  function setBookmarks(list) {
-    localStorage.setItem("df_bookmarks", JSON.stringify(list));
-  }
-
-  function isBookmarked(id) {
-    return getBookmarks().includes(id);
-  }
-
-  function toggleBookmark(id) {
-    const list = getBookmarks();
-    const i = list.indexOf(id);
-    if (i === -1) list.push(id);
-    else list.splice(i, 1);
-    setBookmarks(list);
-  }
-
-  // =========================
-  // CREATE MODAL (JS ONLY)
-  // =========================
+//modal//
   function createModal() {
     const modal = document.createElement("div");
     modal.id = "dfModal";
@@ -187,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Nutrition meta for recipes
+  // Nutrition recipes //
   const nutritionMetaMap = {
     "breakfast": { icon: "🍳", label: "Recipe", extra: "5–10 min" },
     "lunch":     { icon: "🥗", label: "Recipe", extra: "10–15 min" },
@@ -195,9 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "snack":     { icon: "🍌", label: "Recipe", extra: "2–5 min" }
   };
 
-  // Descriptions (JS-only)
+  // Descriptions for workouts //
   const descriptions = {
-    // Workouts
     "morning-jump-start": "A quick full-body wake-up routine to raise your heart rate and loosen joints for the day.",
     "leg-liquifier": "Lower-body focused mobility + burn. Great after leg day or before a tough session.",
     "bed-time-yoga": "A calming flow to release tension and improve sleep quality.",
@@ -211,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "lower-body": "Build glutes and legs with workouts focused on stability, power, and endurance.",
     "full-body": "Full-body sessions that hit major muscle groups for maximum efficiency.",
 
-    // Nutrition recipes
+    // Nutrition recipes //
     "breakfast": "Fast, high-protein breakfast ideas to start your day energized.",
     "lunch": "Balanced meals with protein + carbs + fiber to keep energy steady.",
     "dinner": "Easy dinners that scale for weight loss, maintain, or gain goals.",
@@ -222,9 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return slugify(title);
   }
 
-  // =========================
-  // WORKOUTS: clickable cards → modal
-  // =========================
+ // workout clicking cards //
   const workoutCards = [
     ...document.querySelectorAll(".focus-card"),
     ...document.querySelectorAll(".mini-card"),
@@ -239,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = makeIdFromTitle(title);
 
     card.addEventListener("click", (e) => {
-      // don't hijack actual links inside the card
+  
       if (e.target.closest("a")) return;
 
       activeId = id;
@@ -259,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modalRefs.desc.textContent = descriptions[id] || "A guided session designed to support your goals with efficient training and recovery.";
 
-      // Begin can later link to a real workout detail page
+     
       modalRefs.begin.setAttribute("href", "#");
 
       updateBookmarkUI();
@@ -267,9 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // =========================
-  // NUTRITION: recipe cards → modal
-  // =========================
+//recipe card modal //
   const recipeCards = [...document.querySelectorAll(".menu-card")];
 
   recipeCards.forEach(card => {
@@ -279,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = makeIdFromTitle(title);
 
     card.addEventListener("click", (e) => {
-      // allow the existing "Quick Breakfast →" link to work normally
       if (e.target.closest("a")) return;
 
       activeId = id;
@@ -299,7 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modalRefs.desc.textContent = descriptions[id] || "More details coming soon.";
 
-      // Recipes: you can point to a future recipes page; for now assessments works
       modalRefs.begin.setAttribute("href", "assessments.html");
 
       updateBookmarkUI();
@@ -307,9 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // =========================
-  // NUTRITION: goal cards → assessments (NO MODAL)
-  // =========================
   document.querySelectorAll(".goal-card").forEach(card => {
     card.classList.add("is-clickable");
     card.addEventListener("click", () => {
