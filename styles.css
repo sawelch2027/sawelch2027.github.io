@@ -94,7 +94,7 @@ a:hover{
   gap: 18px;
 }
 
-#assign1, #assign2, #assign3, #assign4, #assign5, #assign6, #assign7, #assign8, #assign9,
+#assign1, #assign2, #assign3, #assign4, #assign5, #assign6, #assign7, #assign8, #assign9, #assign10,
 #project1, #project2, #project3, #project4, #project5{
   background: #1a2540;             
   border: 2px solid #2a3a63;
@@ -104,7 +104,7 @@ a:hover{
 }
 
 
-#assign1 p, #assign2 p, #assign3 p, #assign4 p, #assign5 p, #assign6 p, #assign7 p, #assign8 p, #assign9 p,
+#assign1 p, #assign2 p, #assign3 p, #assign4 p, #assign5 p, #assign6 p, #assign7 p, #assign8 p, #assign9 p, #assign10 p,
 #project1 p, #project2 p, #project3 p, #project4 p, #project5 p{
   font-size: 13px;
   color: #d1dcf6;
@@ -112,7 +112,7 @@ a:hover{
 }
 
 
-#assign1 img, #assign2 img, #assign3 img, #assign4 img, #assign5 img, #assign6 img, #assign7 img, #assign8 img, #assign9 img,
+#assign1 img, #assign2 img, #assign3 img, #assign4 img, #assign5 img, #assign6 img, #assign7 img, #assign8 img, #assign9 img, #assign10 img,
 #project1 img, #project2 img, #project3 img, #project4 img, #project5 img{
   width: 100%;
   height: 150px;
@@ -123,8 +123,7 @@ a:hover{
 
 
 #assign1 .linklight a, #assign2 .linklight a, #assign3 .linklight a, #assign4 .linklight a,
-#assign5 .linklight a, #assign6 .linklight a, #assign7 .linklight a, #assign8 .linklight a, #assign9 .linklight a,
-#project1 .linklight a, #project2 .linklight a, #project3 .linklight a, #project4 .linklight a, #project5 .linklight a{
+#assign5 .linklight a, #assign6 .linklight a, #assign7 .linklight a, #assign8 .linklight a, #assign9 .linklight a, #assign10 .linklight a, #project1 .linklight a, #project2 .linklight a, #project3 .linklight a, #project4 .linklight a, #project5 .linklight a{
   display: inline-block;
   margin-bottom: 6px;
   padding: 6px 10px;
@@ -164,7 +163,7 @@ footer{
     font-size: 22px;
   }
 
-  #assign1 img, #assign2 img, #assign3 img, #assign4 img, #assign5 img, #assign6 img, #assign7 img, #assign8 img, #assign9 img,
+  #assign1 img, #assign2 img, #assign3 img, #assign4 img, #assign5 img, #assign6 img, #assign7 img, #assign8 img, #assign9 img, #assign10 img,
   #project1 img, #project2 img, #project3 img, #project4 img, #project5 img{
     height: 170px;
   }
