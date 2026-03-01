@@ -1,3 +1,5 @@
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
 
 * {
     margin: 0;
@@ -547,6 +549,40 @@ footer {
 .left-logo img{
   display: none;
 }
+
+.overlay {
+    padding: 50px 24px;
+  }
+
+  .updated-content {
+    grid-template-columns: 1fr;   /* stack */
+    text-align: center;
+    gap: 28px;
+  }
+
+  .updated-content h2 {
+    font-size: 24px;
+  }
+
+  .updated-content p {
+    font-size: 14px;
+  }
+
+  /* email form full width */
+  .updated-content form,
+  .updated-content .email-box {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .updated-content input[type="email"] {
+    width: 100%;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
 }
 /*workout*/
 
@@ -915,7 +951,111 @@ footer {
   color: white;
 }
 
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
 
+.modal.is-open{ display: block; }
+
+.modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal__panel{
+  position: relative;
+  width: min(900px, 92vw);
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+
+.modal__close{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal__img{
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal__content{
+  padding: 16px 18px 18px;
+}
+
+.modal__meta{
+  margin: 6px 0 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+.modal__desc{
+  margin: 0 0 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.modal__actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* optional bookmark styling */
+.js-bookmark.is-bookmarked{
+  background: #0d1b2a;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* if you use a mini bookmark link */
+.mini-bookmark{
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  color: #17175b;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* make cards feel clickable */
+.is-clickable { cursor: pointer; 
+}
+
+/* optional hover polish */
+.is-clickable:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* optional "Saved" look for injected buttons */
+.card-bookmark.is-bookmarked,
+#modalBookmark.is-bookmarked {
+  background: #0d1b2a;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.goal-card.is-clickable {
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .workout-wrap {

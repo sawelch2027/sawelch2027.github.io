@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>DiveFitness</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>DiveFitness</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-
 <header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
-            <h1>DiveFitness</h1>
-        </div>
-
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <h2>Menu ▼</h2>
-        </div>
-
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="nutrition.html">Nutrition</a></li>
-                <li><a href="workouts.html">Workouts</a></li>
-                <li><a href="assessments.html">Assessment</a></li>
-                <li><a href="homepage.html" class="login-btn">Log In</a></li>
-            </ul>
-        </nav>
+  <div class="header-container">
+    <div class="logo">
+      <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+      <h1>DiveFitness</h1>
     </div>
-</header>
-<main class="workouts-page">
-  
 
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <h2>Menu ▼</h2>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="assessments.html">Assessment</a></li>
+        <li><a href="homepage.html" class="login-btn">Log In</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="workouts-page">
 
   <section class="workout-hero">
     <div class="workout-hero__overlay">
@@ -48,227 +46,215 @@
       </div>
     </div>
   </section>
-<div class="page-wrap">
 
-  <section class="workout-section">
-    <div class="workout-wrap">
-      <h2 class="workout-title">Featured Plans</h2>
+  <div class="page-wrap">
 
-      <div class="featured-grid">
-     
-        <div class="featured-card featured-card--text">
-          <h3>Strength Mastery</h3>
-          <p>
-            Build real muscle with this comprehensive 8-week strength training
-            program using free weights.
-          </p>
-          <div class="featured-actions">
-            <a class="btn-dark" href="#">Begin →</a>
-            <a class="btn-light" href="#">Bookmark</a>
-          </div>
-        </div>
+    <!-- FEATURED PLANS -->
+    <section class="workout-section">
+      <div class="workout-wrap">
+        <h2 class="workout-title">Featured Plans</h2>
 
-        <div class="featured-card featured-card--image">
-          <img src="images/strength.jpg" alt="Strength training">
-        </div>
+        <div class="featured-grid">
 
-   
-        <div class="featured-card featured-card--image">
-          <img src="images/HIIT.jpg" alt="HIIT cardio">
-        </div>
-
-        <div class="featured-card featured-card--text">
-          <h3>HIIT Cardio Blast</h3>
-          <p>
-            High-intensity interval training to burn fat efficiently and
-            accelerate health in record time.
-          </p>
-          <div class="featured-actions">
-            <a class="btn-dark" href="#">Begin →</a>
-            <a class="btn-light" href="#">Bookmark</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="workout-section">
-  <div class="workout-wrap">
-    <h2 class="workout-title">Focus on your Body</h2>
-    <p class="workout-subtext">
-      Recovery is just as important as the workout itself. Explore our library
-      of guided stretching and yoga routines designed to improve flexibility,
-      reduce soreness, and prevent injury.
-    </p>
-
-    <div class="focus-grid">
-
-      <!-- BIG CARD -->
-      <div class="focus-card focus-card--big">
-        <img src="images/Workout 4.jpg" alt="Morning mobility session">
-        <div class="focus-card__bar">
-          <div>
-            <h3>Morning Jump Start</h3>
-            <p class="workout-meta"><span class="legend">🔥</span> Moderate · 10 min</p>
-          </div>
-          <div class="focus-actions">
-            <a class="btn-dark" href="#">Begin →</a>
-            <a class="btn-light" href="#">Bookmark</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="focus-right">
-
-        <!-- STACK CARD -->
-        <div class="focus-card focus-card--stack">
-          <img src="images/Stretch.jpg" alt="Deep tissue release stretch">
-          <div class="focus-card__stacktext">
-            <h3>Leg Liquifier</h3>
-            <p class="workout-meta"><span class="legend">🦵</span> Moderate · 20 min</p>
-          </div>
-        </div>
-
-        <!-- MINI GRID (expanded to 4 cards) -->
-        <div class="mini-grid">
-          <div class="mini-card">
-            <img src="images/yoga 2.jpg" alt="Bed time yoga routine">
-            <div class="mini-card__text">
-              <h4>Bed Time Yoga</h4>
-              <p class="workout-meta"><span class="legend">🧘</span> Beginner · 10 min</p>
+          <div class="featured-card featured-card--text">
+            <h3 class="workout-title-text">Strength Mastery</h3>
+            <p>
+              Build real muscle with this comprehensive 8-week strength training
+              program using free weights.
+            </p>
+            <!-- You can keep these links or remove them; JS modal is the main interaction -->
+            <div class="featured-actions">
+              <a class="btn-dark" href="assessments.html">Begin →</a>
+              <a class="btn-light" href="#">Bookmark</a>
             </div>
           </div>
 
-          <div class="mini-card">
-            <img src="images/yoga 1.jpg" alt="Beginner yoga flow">
-            <div class="mini-card__text">
-              <h4>Beginner Yoga</h4>
-              <p class="workout-meta"><span class="legend">🧘</span> Beginner · 10 min</p>
+          <div class="featured-card featured-card--image">
+            <img src="images/strength.jpg" alt="Strength training">
+          </div>
+
+          <div class="featured-card featured-card--image">
+            <img src="images/HIIT.jpg" alt="HIIT cardio">
+          </div>
+
+          <div class="featured-card featured-card--text">
+            <h3 class="workout-title-text">HIIT Cardio Blast</h3>
+            <p>
+              High-intensity interval training to burn fat efficiently and
+              accelerate health in record time.
+            </p>
+            <div class="featured-actions">
+              <a class="btn-dark" href="assessments.html">Begin →</a>
+              <a class="btn-light" href="#">Bookmark</a>
             </div>
           </div>
 
-          <div class="mini-card">
-            <img src="images/HipFlow.jpg" alt="Hip opener flow">
-            <div class="mini-card__text">
-              <h4>Hip Opener Flow</h4>
-              <p class="workout-meta"><span class="legend">🦵</span> moderate · 15 min</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS GRID -->
+    <section class="workout-section">
+      <div class="workout-wrap">
+        <h2 class="workout-title">Focus on your Body</h2>
+        <p class="workout-subtext">
+          Recovery is just as important as the workout itself. Explore our library
+          of guided stretching and yoga routines designed to improve flexibility,
+          reduce soreness, and prevent injury.
+        </p>
+
+        <div class="focus-grid">
+
+          <div class="focus-card focus-card--big workout-item">
+            <img src="images/Workout 4.jpg" alt="Morning mobility session">
+            <div class="focus-card__bar">
+              <div>
+                <h3 class="workout-title-text">Morning Jump Start</h3>
+                <p class="workout-meta"><span class="legend">🔥</span> Moderate · 10 min</p>
+              </div>
+              <div class="focus-actions">
+                <a class="btn-dark" href="assessments.html">Begin →</a>
+                <a class="btn-light" href="#">Bookmark</a>
+              </div>
             </div>
           </div>
 
-          <div class="mini-card">
-            <img src="images/RecoveryReset.jpg" alt="Recovery reset stretch session">
-            <div class="mini-card__text">
-              <h4>Recovery Reset</h4>
-              <p class="workout-meta"><span class="legend">🔥</span> Easy · 12 min</p>
+          <div class="focus-right">
+
+            <div class="focus-card focus-card--stack workout-item">
+              <img src="images/Stretch.jpg" alt="Deep tissue release stretch">
+              <div class="focus-card__stacktext">
+                <h3 class="workout-title-text">Leg Liquifier</h3>
+                <p class="workout-meta"><span class="legend">🦵</span> Moderate · 20 min</p>
+              </div>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini-card workout-item">
+                <img src="images/yoga 2.jpg" alt="Bed time yoga routine">
+                <div class="mini-card__text">
+                  <h4 class="workout-title-text">Bed Time Yoga</h4>
+                  <p class="workout-meta"><span class="legend">🧘</span> Beginner · 10 min</p>
+                </div>
+              </div>
+
+              <div class="mini-card workout-item">
+                <img src="images/yoga 1.jpg" alt="Beginner yoga flow">
+                <div class="mini-card__text">
+                  <h4 class="workout-title-text">Beginner Yoga</h4>
+                  <p class="workout-meta"><span class="legend">🧘</span> Beginner · 10 min</p>
+                </div>
+              </div>
+
+              <div class="mini-card workout-item">
+                <img src="images/HipFlow.jpg" alt="Hip opener flow">
+                <div class="mini-card__text">
+                  <h4 class="workout-title-text">Hip Opener Flow</h4>
+                  <p class="workout-meta"><span class="legend">🦵</span> Moderate · 15 min</p>
+                </div>
+              </div>
+
+              <div class="mini-card workout-item">
+                <img src="images/RecoveryReset.jpg" alt="Recovery reset stretch session">
+                <div class="mini-card__text">
+                  <h4 class="workout-title-text">Recovery Reset</h4>
+                  <p class="workout-meta"><span class="legend">🔥</span> Easy · 12 min</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TARGET REGION -->
+    <section class="workout-section workout-section--tight">
+      <div class="workout-wrap">
+        <h2>Target Region</h2>
+
+        <div class="target-grid">
+          <div class="target-item">
+            <div class="target-icon">🧘</div>
+            <div>
+              <h3 class="workout-title-text">Yoga</h3>
+              <p>This section strengthens and stretches the body...</p>
+            </div>
+          </div>
+
+          <div class="target-item">
+            <div class="target-icon">💪</div>
+            <div>
+              <h3 class="workout-title-text">Upper Body</h3>
+              <p>Build strength and shape the chest, arms...</p>
+            </div>
+          </div>
+
+          <div class="target-item">
+            <div class="target-icon">🦵</div>
+            <div>
+              <h3 class="workout-title-text">Lower Body</h3>
+              <p>Strengthen glutes, hamstrings, quads...</p>
+            </div>
+          </div>
+
+          <div class="target-item">
+            <div class="target-icon">🔥</div>
+            <div>
+              <h3 class="workout-title-text">Full Body</h3>
+              <p>For when you want results everywhere...</p>
             </div>
           </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
-</div>
-  <section class="workout-section workout-section--tight">
-    <div class="workout-wrap">
-      <h2>Target Region</h2>
-
-      <div class="target-grid">
-        <div class="target-item">
-          <div class="target-icon">🧘</div>
-          <div>
-            <h3>Yoga</h3>
-            <p>
-              This section strengthens and stretches the body. Workouts are designed to loosen your muscles and lessen injury during your workouts.
-            </p>
-          </div>
-        </div>
-
-        <div class="target-item">
-          <div class="target-icon">💪</div>
-          <div>
-            <h3>Upper Body</h3>
-            <p>
-              Build strength and shape the chest, arms, shoulders, and back with
-              guided training routines using weights or bodyweight.
-            </p>
-          </div>
-        </div>
-
-        <div class="target-item">
-          <div class="target-icon">🦵</div>
-          <div>
-            <h3>Lower Body</h3>
-            <p>
-              Strengthen glutes, hamstrings, quads, and calves with workouts that
-              focus on stability, power, and endurance.
-            </p>
-          </div>
-        </div>
-
-        <div class="target-item">
-          <div class="target-icon">🔥</div>
-          <div>
-            <h3>Full Body</h3>
-            <p>
-              For when you want results everywhere. These workouts mix major
-              muscle groups to maximize efficiency and overall conditioning.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  
+  </div><!-- /.page-wrap -->
 </main>
+
 <footer>
-
-    <div class="footer-container">
-
-      
-        <div class="footer-brand">
-            <h3>Dive Fitness</h3>
-
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Dive Fitness</h3>
+      <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://x.com/"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="YouTube"></a>
             </div>
-        </div>
-
-        <div class="footer-links">
-            <div class="column">
-                <h4>Workouts</h4>
-                <a href="workouts.html">HIIT</a>
-                <a href="workouts.html">Stretch</a>
-                <a href="workouts.html">Strength</a>
-            </div>
-
-            <div class="column">
-                <h4>Nutrition</h4>
-                <a href="nutrition.html">Weight Gain</a>
-                <a href="nutrition.html">Weight loss</a>
-                <a href="nutrition.html">Maintain</a>
-            </div>
-
-            <div class="column">
-                <h4>Assessments</h4>
-                <a href="aboutus.html">Why do I need an Assessment?</a>
-                <a href="aboutus.html">How do I take my measurements?</a>
-                <a href="assessments.html">Measurement Conversion</a>
-            </div>
-        </div>
-
     </div>
-    <div class="footer-bottom">
+
+    <div class="footer-links">
+      <div class="column">
+        <h4>Workouts</h4>
+        <a href="workouts.html">HIIT</a>
+        <a href="workouts.html">Stretch</a>
+        <a href="workouts.html">Strength</a>
+      </div>
+
+      <div class="column">
+        <h4>Nutrition</h4>
+        <a href="nutrition.html">Weight Gain</a>
+        <a href="nutrition.html">Weight loss</a>
+        <a href="nutrition.html">Maintain</a>
+      </div>
+
+      <div class="column">
+        <h4>Assessments</h4>
+        <a href="aboutus.html">Why do I need an Assessment?</a>
+        <a href="aboutus.html">How do I take my measurements?</a>
+        <a href="assessments.html">Measurement Conversion</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
     © 2026 Dive Fitness. All rights reserved.
-    </div>
-
+  </div>
 </footer>
+
 <script src="scripts.js"></script>
 </body>
 </html>
