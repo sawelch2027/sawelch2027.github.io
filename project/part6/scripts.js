@@ -1,4 +1,14 @@
-//nav menu//
+// -----------------------
+// SLUGIFY (MUST BE GLOBAL)
+// -----------------------
+function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}//nav menu//
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   if (!nav) return;
@@ -173,9 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "snack": "Quick snack ideas that support your macros without feeling heavy."
   };
 
-  function makeIdFromTitle(title) {
-    return slugify(title);
-  }
+ function makeIdFromTitle(title) {
+  return slugify(title);
+}
 
  // workout clicking cards //
   const workoutCards = [
