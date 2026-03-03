@@ -264,3 +264,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+const url = "https://sawelch2027.github.io/project/part6/json/workouts.json";
+
+async function loadWorkouts() {
+
+  const grid = document.getElementById("focusGrid");
+  if (!grid) return; // only runs on workouts page
+
+  const url = "PASTE YOUR FULL GITHUB JSON URL HERE";
+
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Fetch failed: " + response.status);
+    }
+
+    const data = await response.json();
+
+    console.log("JSON Loaded:", data); // IMPORTANT
+
+    grid.innerHTML = data.map(item => `
+      <div class="focus-card">
+        <img src="${item.img_name}" alt="${item.title}">
+        <div class="focus-card__bar">
+          <div>
+            <h3>${item.title}</h3>
+            <p>${item.icon} ${item.level} · ${item.minutes} min</p>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+  } catch (error) {
+    console.error("ERROR LOADING JSON:", error);
+    grid.innerHTML = "<p style='color:white;'>Could not load workouts.</p>";
+  }
+}
+
+loadWorkouts();
