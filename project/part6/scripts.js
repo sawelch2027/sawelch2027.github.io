@@ -297,4 +297,65 @@ document.addEventListener("DOMContentLoaded", () => {
       focusGrid.innerHTML = "<p>Could not load workouts.</p>";
     });
 
+    fetch("https://sawelch2027.github.io/project/part6/json/workouts.json")
+  .then(res => res.json())
+  .then(data => {
+
+    const big = data.find(item => item.layout === "big");
+    const stack = data.find(item => item.layout === "stack");
+    const minis = data.filter(item => item.layout === "mini");
+
+    const bigCard = document.getElementById("bigCard");
+    const stackCard = document.getElementById("stackCard");
+    const miniGrid = document.getElementById("miniGrid");
+
+    // BIG
+    if (big && bigCard) {
+      bigCard.innerHTML = `
+        <img src="${big.img_name}" alt="${big.title}">
+        <div class="focus-card__bar">
+          <div>
+            <h3>${big.title}</h3>
+            <p class="workout-meta">
+              <span class="legend">${big.icon}</span>
+              ${big.level} · ${big.minutes} min
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    // STACK
+    if (stack && stackCard) {
+      stackCard.innerHTML = `
+        <img src="${stack.img_name}" alt="${stack.title}">
+        <div class="focus-card__stacktext">
+          <h3>${stack.title}</h3>
+          <p class="workout-meta">
+            <span class="legend">${stack.icon}</span>
+            ${stack.level} · ${stack.minutes} min
+          </p>
+        </div>
+      `;
+    }
+
+    // MINI
+    if (miniGrid) {
+      miniGrid.innerHTML = minis.map(item => `
+        <div class="mini-card">
+          <img src="${item.img_name}" alt="${item.title}">
+          <div class="mini-card__text">
+            <h4>${item.title}</h4>
+            <p class="workout-meta">
+              <span class="legend">${item.icon}</span>
+              ${item.level} · ${item.minutes} min
+            </p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+  })
+  .catch(err => console.error("JSON error:", err));
+
 });

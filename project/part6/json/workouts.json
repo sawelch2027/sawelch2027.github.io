@@ -8,6 +8,7 @@
     "icon": "🔥",
     "desc": "A quick full-body wake-up routine to loosen joints and raise your heart rate.",
     "img_name": "images/Workout 4.jpg",
+    "layout": "big",
     "page": "workout-morning-jump-start.html"
   },
   {
@@ -19,6 +20,7 @@
     "icon": "🦵",
     "desc": "Lower-body mobility + burn. Great after leg day or before a hard session.",
     "img_name": "images/Stretch.jpg",
+    "layout": "stack",
     "page": "leg-liquifier.html"
   },
   {
@@ -30,6 +32,7 @@
     "icon": "🧘",
     "desc": "A calming flow to release tension and improve sleep quality.",
     "img_name": "images/yoga 2.jpg",
+    "layout": "mini",
     "page": "bed-time-yoga.html"
   },
   {
@@ -41,6 +44,7 @@
     "icon": "🧘",
     "desc": "Foundational poses to build flexibility and reduce soreness.",
     "img_name": "images/yoga 1.jpg",
+    "layout": "mini",
     "page": "beginner-yoga.html"
   },
   {
@@ -52,6 +56,7 @@
     "icon": "🦵",
     "desc": "Targets tight hips and glutes to improve range of motion and reduce back strain.",
     "img_name": "images/HipFlow.jpg",
+    "layout": "mini",
     "page": "hip-opener.html"
   },
   {
@@ -63,6 +68,7 @@
     "icon": "🔥",
     "desc": "Light movement to boost circulation and speed recovery.",
     "img_name": "images/RecoveryReset.jpg",
+    "layout": "mini",
     "page": "recovery-reset.html"
   },
   {
@@ -74,6 +80,7 @@
     "icon": "💪",
     "desc": "Progressive strength training using free weights to build muscle.",
     "img_name": "images/strength.jpg",
+    "layout": "mini",
     "page": "strength-mastery.html"
   },
   {
@@ -85,6 +92,7 @@
     "icon": "🔥",
     "desc": "High intensity intervals designed to burn fat and improve conditioning fast.",
     "img_name": "images/HIIT.jpg",
+    "layout": "mini",
     "page": "hiit-cardio.html"
   }
 ]
