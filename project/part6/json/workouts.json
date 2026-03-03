@@ -1,0 +1,90 @@
+[
+  {
+    "_id": 1,
+    "title": "Morning Jump Start",
+    "category": "Recovery",
+    "level": "Moderate",
+    "minutes": 10,
+    "icon": "🔥",
+    "desc": "A quick full-body wake-up routine to loosen joints and raise your heart rate.",
+    "img_name": "images/Workout 4.jpg",
+    "page": "workout-morning-jump-start.html"
+  },
+  {
+    "_id": 2,
+    "title": "Leg Liquifier",
+    "category": "Mobility",
+    "level": "Moderate",
+    "minutes": 20,
+    "icon": "🦵",
+    "desc": "Lower-body mobility + burn. Great after leg day or before a hard session.",
+    "img_name": "images/Stretch.jpg",
+    "page": "leg-liquifier.html"
+  },
+  {
+    "_id": 3,
+    "title": "Bed Time Yoga",
+    "category": "Yoga",
+    "level": "Beginner",
+    "minutes": 10,
+    "icon": "🧘",
+    "desc": "A calming flow to release tension and improve sleep quality.",
+    "img_name": "images/yoga 2.jpg",
+    "page": "bed-time-yoga.html"
+  },
+  {
+    "_id": 4,
+    "title": "Beginner Yoga",
+    "category": "Yoga",
+    "level": "Beginner",
+    "minutes": 10,
+    "icon": "🧘",
+    "desc": "Foundational poses to build flexibility and reduce soreness.",
+    "img_name": "images/yoga 1.jpg",
+    "page": "beginner-yoga.html"
+  },
+  {
+    "_id": 5,
+    "title": "Hip Opener Flow",
+    "category": "Mobility",
+    "level": "Moderate",
+    "minutes": 15,
+    "icon": "🦵",
+    "desc": "Targets tight hips and glutes to improve range of motion and reduce back strain.",
+    "img_name": "images/HipFlow.jpg",
+    "page": "hip-opener.html"
+  },
+  {
+    "_id": 6,
+    "title": "Recovery Reset",
+    "category": "Recovery",
+    "level": "Easy",
+    "minutes": 12,
+    "icon": "🔥",
+    "desc": "Light movement to boost circulation and speed recovery.",
+    "img_name": "images/RecoveryReset.jpg",
+    "page": "recovery-reset.html"
+  },
+  {
+    "_id": 7,
+    "title": "Strength Mastery",
+    "category": "Strength",
+    "level": "Intermediate",
+    "minutes": 45,
+    "icon": "💪",
+    "desc": "Progressive strength training using free weights to build muscle.",
+    "img_name": "images/strength.jpg",
+    "page": "strength-mastery.html"
+  },
+  {
+    "_id": 8,
+    "title": "HIIT Cardio Blast",
+    "category": "Cardio",
+    "level": "Advanced",
+    "minutes": 25,
+    "icon": "🔥",
+    "desc": "High intensity intervals designed to burn fat and improve conditioning fast.",
+    "img_name": "images/HIIT.jpg",
+    "page": "hiit-cardio.html"
+  }
+]
