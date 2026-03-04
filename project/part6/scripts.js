@@ -1,4 +1,6 @@
-//nav menu//
+// ==========================
+// NAV MENU
+// ==========================
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   if (!nav) return;
@@ -6,29 +8,10 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-// imperial and metric //
-  const imperialBtn = document.getElementById("btn-imperial");
-  const metricBtn   = document.getElementById("btn-metric");
-  const labelHeight = document.getElementById("label-height");
-  const labelWeight = document.getElementById("label-weight");
 
-  if (imperialBtn && metricBtn && labelHeight && labelWeight) {
-    imperialBtn.addEventListener("click", () => {
-      imperialBtn.classList.add("active");
-      metricBtn.classList.remove("active");
-      if (labelHeight.firstChild) labelHeight.firstChild.nodeValue = "Height (inches): ";
-      if (labelWeight.firstChild) labelWeight.firstChild.nodeValue = "Weight (lbs): ";
-    });
-
-    metricBtn.addEventListener("click", () => {
-      metricBtn.classList.add("active");
-      imperialBtn.classList.remove("active");
-      if (labelHeight.firstChild) labelHeight.firstChild.nodeValue = "Height (cm): ";
-      if (labelWeight.firstChild) labelWeight.firstChild.nodeValue = "Weight (kg): ";
-    });
-  }
-
-//modal//
+  // ==========================
+  // CREATE MODAL
+  // ==========================
   function createModal() {
     const modal = document.createElement("div");
     modal.id = "dfModal";
@@ -37,21 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modal.innerHTML = `
       <div class="modal__backdrop" data-close="true"></div>
-
-      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Details">
-        <button class="modal__close" data-close="true" aria-label="Close">×</button>
-
-        <img class="modal__img" id="dfModalImg" alt="Card image">
-
+      <div class="modal__panel">
+        <button class="modal__close" data-close="true">×</button>
+        <img class="modal__img" id="dfModalImg" alt="">
         <div class="modal__content">
           <h3 id="dfModalTitle"></h3>
-          <p class="modal__meta" id="dfModalMeta"></p>
-          <p class="modal__desc" id="dfModalDesc"></p>
-
-          <div class="modal__actions">
-            <a href="#" class="btn-dark" id="dfModalBegin">Begin →</a>
-            <button class="btn-light" id="dfModalBookmark" aria-pressed="false">Bookmark</button>
-          </div>
+          <p id="dfModalMeta"></p>
+          <p id="dfModalDesc"></p>
         </div>
       </div>
     `;
@@ -63,16 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
       img: modal.querySelector("#dfModalImg"),
       title: modal.querySelector("#dfModalTitle"),
       meta: modal.querySelector("#dfModalMeta"),
-      desc: modal.querySelector("#dfModalDesc"),
-      begin: modal.querySelector("#dfModalBegin"),
-      bookmark: modal.querySelector("#dfModalBookmark")
+      desc: modal.querySelector("#dfModalDesc")
     };
   }
 
   const modalRefs = createModal();
   const modal = modalRefs.modal;
-
-  let activeId = null;
 
   function openModal() {
     modal.classList.add("is-open");
@@ -84,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
-    activeId = null;
   }
 
   modal.addEventListener("click", (e) => {
@@ -92,224 +62,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    if (e.key === "Escape") closeModal();
   });
 
-  function updateBookmarkUI() {
-    if (!activeId) return;
-    const saved = isBookmarked(activeId);
-    modalRefs.bookmark.classList.toggle("is-bookmarked", saved);
-    modalRefs.bookmark.textContent = saved ? "Bookmarked ✓" : "Bookmark";
-    modalRefs.bookmark.setAttribute("aria-pressed", saved ? "true" : "false");
-  }
+// ==========================
+// JSON LOAD FOR FOCUS SECTION
+// ==========================
+const bigCard = document.getElementById("bigCard");
+const stackCard = document.getElementById("stackCard");
+const miniGrid = document.getElementById("miniGrid");
 
-  modalRefs.bookmark.addEventListener("click", () => {
-    if (!activeId) return;
-    toggleBookmark(activeId);
-    updateBookmarkUI();
-  });
+if (!bigCard && !stackCard && !miniGrid) return;
 
-  // =========================
-  // HELPERS: pull info from existing card HTML
-  // =========================
-  function getTitleFromCard(card) {
-    const t = card.querySelector(".workout-title-text, h3, h4");
-    return t ? t.textContent.trim() : "Card";
-  }
-
-  function getImageFromCard(card) {
-    const img = card.querySelector("img");
-    return img ? img.getAttribute("src") : "";
-  }
-
-  // Workouts meta: emoji comes from <span class="legend"> (reliable)
-  function parseWorkoutMeta(card) {
-    const legendEl = card.querySelector(".legend");
-    const icon = legendEl ? legendEl.textContent.trim() : "💪";
-
-    const metaEl = card.querySelector(".workout-meta");
-    if (!metaEl) {
-      return { icon, level: "Beginner", mins: "10 min" };
-    }
-
-    const full = metaEl.textContent.replace(/\s+/g, " ").trim();
-    const cleaned = full.startsWith(icon) ? full.slice(icon.length).trim() : full;
-    const parts = cleaned.split("·").map(s => s.trim());
-
-    return {
-      icon,
-      level: parts[0] || "Beginner",
-      mins: parts[1] || "10 min"
-    };
-  }
-
-  // Nutrition recipes //
-  const nutritionMetaMap = {
-    "breakfast": { icon: "🍳", label: "Recipe", extra: "5–10 min" },
-    "lunch":     { icon: "🥗", label: "Recipe", extra: "10–15 min" },
-    "dinner":    { icon: "🍲", label: "Recipe", extra: "15–25 min" },
-    "snack":     { icon: "🍌", label: "Recipe", extra: "2–5 min" }
-  };
-
-  // Descriptions for workouts //
-  const descriptions = {
-    "morning-jump-start": "A quick full-body wake-up routine to raise your heart rate and loosen joints for the day.",
-    "leg-liquifier": "Lower-body focused mobility + burn. Great after leg day or before a tough session.",
-    "bed-time-yoga": "A calming flow to release tension and improve sleep quality.",
-    "beginner-yoga": "Foundational poses to build flexibility and reduce soreness.",
-    "hip-opener-flow": "Targets tight hips and glutes to improve range of motion and reduce back strain.",
-    "recovery-reset": "Reset your body with light movement to boost circulation and speed recovery.",
-    "strength-mastery": "Build real muscle with progressive strength training using free weights.",
-    "hiit-cardio-blast": "High intensity intervals designed to burn fat and improve conditioning fast.",
-    "yoga": "Stretch and strengthen with guided yoga sessions to improve flexibility and reduce injury risk.",
-    "upper-body": "Train chest, shoulders, back, and arms with structured routines and progressive overload.",
-    "lower-body": "Build glutes and legs with workouts focused on stability, power, and endurance.",
-    "full-body": "Full-body sessions that hit major muscle groups for maximum efficiency.",
-
-    // Nutrition recipes //
-    "breakfast": "Fast, high-protein breakfast ideas to start your day energized.",
-    "lunch": "Balanced meals with protein + carbs + fiber to keep energy steady.",
-    "dinner": "Easy dinners that scale for weight loss, maintain, or gain goals.",
-    "snack": "Quick snack ideas that support your macros without feeling heavy."
-  };
-
-  function makeIdFromTitle(title) {
-    return slugify(title);
-  }
-
- // workout clicking cards //
-  const workoutCards = [
-    ...document.querySelectorAll(".focus-card"),
-    ...document.querySelectorAll(".mini-card"),
-    ...document.querySelectorAll(".featured-card--text"),
-    ...document.querySelectorAll(".target-item")
-  ];
-
-  workoutCards.forEach(card => {
-    card.classList.add("is-clickable");
-
-    const title = getTitleFromCard(card);
-    const id = makeIdFromTitle(title);
-
-    card.addEventListener("click", (e) => {
-  
-      if (e.target.closest("a")) return;
-
-      activeId = id;
-
-      const imgSrc = getImageFromCard(card);
-      if (imgSrc) {
-        modalRefs.img.src = imgSrc;
-        modalRefs.img.style.display = "block";
-      } else {
-        modalRefs.img.style.display = "none";
-      }
-
-      modalRefs.title.textContent = title;
-
-      const meta = parseWorkoutMeta(card);
-      modalRefs.meta.textContent = `${meta.icon} ${meta.level} · ${meta.mins}`;
-
-      modalRefs.desc.textContent = descriptions[id] || "A guided session designed to support your goals with efficient training and recovery.";
-
-     
-      modalRefs.begin.setAttribute("href", "#");
-
-      updateBookmarkUI();
-      openModal();
-    });
-  });
-
-//recipe card modal //
-  const recipeCards = [...document.querySelectorAll(".menu-card")];
-
-  recipeCards.forEach(card => {
-    card.classList.add("is-clickable");
-
-    const title = getTitleFromCard(card);
-    const id = makeIdFromTitle(title);
-
-    card.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return;
-
-      activeId = id;
-
-      const imgSrc = getImageFromCard(card);
-      if (imgSrc) {
-        modalRefs.img.src = imgSrc;
-        modalRefs.img.style.display = "block";
-      } else {
-        modalRefs.img.style.display = "none";
-      }
-
-      modalRefs.title.textContent = title;
-
-      const meta = nutritionMetaMap[id] || { icon: "🍽️", label: "Recipe", extra: "" };
-      modalRefs.meta.textContent = `${meta.icon} ${meta.label}${meta.extra ? " · " + meta.extra : ""}`;
-
-      modalRefs.desc.textContent = descriptions[id] || "More details coming soon.";
-
-      modalRefs.begin.setAttribute("href", "assessments.html");
-
-      updateBookmarkUI();
-      openModal();
-    });
-  });
-
-  document.querySelectorAll(".goal-card").forEach(card => {
-    card.classList.add("is-clickable");
-    card.addEventListener("click", () => {
-      window.location.href = "assessments.html";
-    });
-  });
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const focusGrid = document.getElementById("focusGrid");
-  if (!focusGrid) return;
-
-  fetch("https://sawelch2027.github.io/project/part6/json/workouts.json")
-    .then(response => response.json())
-    .then(data => {
-
-      const focusItems = data.filter(item => item.category === "Focus");
-
-      focusGrid.innerHTML = focusItems.map(item => `
-        <div class="focus-card">
-          <img src="${item.img_name}" alt="${item.title}">
-          <div class="focus-card__bar">
-            <div>
-              <h3>${item.title}</h3>
-              <p class="workout-meta">
-                <span class="legend">${item.icon}</span>
-                ${item.level} · ${item.minutes} min
-              </p>
-            </div>
-          </div>
-        </div>
-      `).join("");
-
-    })
-    .catch(error => {
-      console.error("Error loading workouts:", error);
-      focusGrid.innerHTML = "<p>Could not load workouts.</p>";
-    });
-
-    fetch("https://sawelch2027.github.io/project/part6/json/workouts.json")
+fetch("https://sawelch2027.github.io/project/part6/json/workouts.json")
   .then(res => res.json())
   .then(data => {
 
-    const big = data.find(item => item.layout === "big");
-    const stack = data.find(item => item.layout === "stack");
-    const minis = data.filter(item => item.layout === "mini");
+    console.log("JSON Loaded:", data);
 
-    const bigCard = document.getElementById("bigCard");
-    const stackCard = document.getElementById("stackCard");
-    const miniGrid = document.getElementById("miniGrid");
+    // ✅ Use ALL items (no category filter)
+    const items = Array.isArray(data) ? data : [];
 
     // BIG
+    const big = items.find(item => item.layout === "big");
     if (big && bigCard) {
       bigCard.innerHTML = `
         <img src="${big.img_name}" alt="${big.title}">
@@ -323,9 +98,18 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
+
+      bigCard.addEventListener("click", () => {
+        modalRefs.img.src = big.img_name;
+        modalRefs.title.textContent = big.title;
+        modalRefs.meta.textContent = `${big.icon} ${big.level} · ${big.minutes} min`;
+        modalRefs.desc.textContent = big.desc; // ✅ JSON uses desc
+        openModal();
+      });
     }
 
     // STACK
+    const stack = items.find(item => item.layout === "stack");
     if (stack && stackCard) {
       stackCard.innerHTML = `
         <img src="${stack.img_name}" alt="${stack.title}">
@@ -337,9 +121,19 @@ document.addEventListener("DOMContentLoaded", () => {
           </p>
         </div>
       `;
+
+      stackCard.addEventListener("click", () => {
+        modalRefs.img.src = stack.img_name;
+        modalRefs.title.textContent = stack.title;
+        modalRefs.meta.textContent = `${stack.icon} ${stack.level} · ${stack.minutes} min`;
+        modalRefs.desc.textContent = stack.desc; // ✅ JSON uses desc
+        openModal();
+      });
     }
 
     // MINI
+    const minis = items.filter(item => item.layout === "mini");
+
     if (miniGrid) {
       miniGrid.innerHTML = minis.map(item => `
         <div class="mini-card">
@@ -353,9 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `).join("");
+
+      miniGrid.querySelectorAll(".mini-card").forEach((card, index) => {
+        const item = minis[index];
+        card.addEventListener("click", () => {
+          modalRefs.img.src = item.img_name;
+          modalRefs.title.textContent = item.title;
+          modalRefs.meta.textContent = `${item.icon} ${item.level} · ${item.minutes} min`;
+          modalRefs.desc.textContent = item.desc; // ✅ JSON uses desc
+          openModal();
+        });
+      });
     }
 
   })
-  .catch(err => console.error("JSON error:", err));
-
-});
+  .catch(err => console.error("JSON ERROR:", err));})

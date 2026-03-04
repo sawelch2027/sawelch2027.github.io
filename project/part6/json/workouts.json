@@ -70,29 +70,5 @@
     "img_name": "images/RecoveryReset.jpg",
     "layout": "mini",
     "page": "recovery-reset.html"
-  },
-  {
-    "_id": 7,
-    "title": "Strength Mastery",
-    "category": "Strength",
-    "level": "Intermediate",
-    "minutes": 45,
-    "icon": "💪",
-    "desc": "Progressive strength training using free weights to build muscle.",
-    "img_name": "images/strength.jpg",
-    "layout": "mini",
-    "page": "strength-mastery.html"
-  },
-  {
-    "_id": 8,
-    "title": "HIIT Cardio Blast",
-    "category": "Cardio",
-    "level": "Advanced",
-    "minutes": 25,
-    "icon": "🔥",
-    "desc": "High intensity intervals designed to burn fat and improve conditioning fast.",
-    "img_name": "images/HIIT.jpg",
-    "layout": "mini",
-    "page": "hiit-cardio.html"
   }
 ]
