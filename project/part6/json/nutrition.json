@@ -1,82 +1,34 @@
 [
   {
     "_id": 1,
-    "title": "Greek Yogurt Bowl",
-    "category": "Breakfast",
-    "goal": "Weight Loss",
-    "calories": "320",
-    "protein": "24g",
-    "description": "Greek yogurt with berries and granola for a quick high-protein breakfast.",
+    "title": "Breakfast",
+    "meal_name": "Greek Yogurt Bowl",
+    "description": "Greek yogurt bowl with fruit + granola. High protein, quick, and great for busy mornings.",
+    "goal": "High Protein",
     "img_name": "images/greek yogurt.jpg"
   },
   {
     "_id": 2,
-    "title": "Avocado Chicken Wrap",
-    "category": "Lunch",
-    "goal": "Maintain",
-    "calories": "520",
-    "protein": "35g",
-    "description": "Grilled chicken, avocado, and vegetables wrapped for balanced midday fuel.",
+    "title": "Lunch",
+    "meal_name": "Chicken + Rice + Veggies",
+    "description": "Chicken + rice + veggies with a simple sauce. Balanced macros that keep energy steady.",
+    "goal": "Balanced Macros",
     "img_name": "images/avocado wrap.jpg"
   },
   {
     "_id": 3,
-    "title": "Quinoa Power Bowl",
-    "category": "Dinner",
-    "goal": "Weight Gain",
-    "calories": "610",
-    "protein": "38g",
-    "description": "Quinoa, lean protein, and roasted vegetables for a filling muscle-building meal.",
+    "title": "Dinner",
+    "meal_name": "Lean Protein Plate",
+    "description": "Lean protein + roasted potatoes + greens. Easy to scale up or down depending on your goal.",
+    "goal": "Flexible Portions",
     "img_name": "images/quinoa bowl.jpg"
   },
   {
     "_id": 4,
-    "title": "Protein Shake",
-    "category": "Snack",
-    "goal": "Maintain",
-    "calories": "250",
-    "protein": "30g",
-    "description": "A simple shake with banana for easy protein and fast recovery.",
+    "title": "Snack",
+    "meal_name": "Protein Shake",
+    "description": "Protein shake + banana or a cottage cheese snack plate. Quick fuel without feeling heavy.",
+    "goal": "Quick Fuel",
     "img_name": "images/protien shake.jpg"
-  },
-  {
-    "_id": 5,
-    "title": "Egg Toast Plate",
-    "category": "Breakfast",
-    "goal": "Maintain",
-    "calories": "410",
-    "protein": "22g",
-    "description": "Eggs, whole grain toast, and fruit for a balanced start to the day.",
-    "img_name": "images/eggs.jpg"
-  },
-  {
-    "_id": 6,
-    "title": "Salmon Rice Bowl",
-    "category": "Lunch",
-    "goal": "Weight Gain",
-    "calories": "640",
-    "protein": "40g",
-    "description": "Salmon, rice, and greens for healthy fats, carbs, and protein.",
-    "img_name": "images/salmon bowl.jpg"
-  },
-  {
-    "_id": 7,
-    "title": "Turkey Sandwich",
-    "category": "Lunch",
-    "goal": "Weight Loss",
-    "calories": "390",
-    "protein": "29g",
-    "description": "Turkey, lettuce, tomato, and light sauce on whole grain bread.",
-    "img_name": "images/turkey sandwich.jpg"
-  },
-  {
-    "_id": 8,
-    "title": "Cottage Cheese Snack Plate",
-    "category": "Snack",
-    "goal": "Weight Loss",
-    "calories": "210",
-    "protein": "20g",
-    "description": "Cottage cheese with fruit for a light snack that still keeps you full.",
-    "img_name": "images/cottage cheese.jpg"
   }
 ]
