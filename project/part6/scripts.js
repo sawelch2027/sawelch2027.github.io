@@ -218,7 +218,7 @@ async function loadNutritionItems() {
   if (!menuGrid) return;
 
   try {
-    const response = await fetch("https://sawelch2027.github.io-1\project\part6\json\nutrition.json");
+    const response = await fetch("https://sawelch2027.github.io/project/part6/jason/nutrition.json");
     const items = await response.json();
 
     items.forEach((item) => {
