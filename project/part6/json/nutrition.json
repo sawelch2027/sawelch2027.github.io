@@ -1,0 +1,82 @@
+[
+  {
+    "_id": 1,
+    "title": "Greek Yogurt Bowl",
+    "category": "Breakfast",
+    "goal": "Weight Loss",
+    "calories": "320",
+    "protein": "24g",
+    "description": "Greek yogurt with berries and granola for a quick high-protein breakfast.",
+    "img_name": "images/greek yogurt.jpg"
+  },
+  {
+    "_id": 2,
+    "title": "Avocado Chicken Wrap",
+    "category": "Lunch",
+    "goal": "Maintain",
+    "calories": "520",
+    "protein": "35g",
+    "description": "Grilled chicken, avocado, and vegetables wrapped for balanced midday fuel.",
+    "img_name": "images/avocado wrap.jpg"
+  },
+  {
+    "_id": 3,
+    "title": "Quinoa Power Bowl",
+    "category": "Dinner",
+    "goal": "Weight Gain",
+    "calories": "610",
+    "protein": "38g",
+    "description": "Quinoa, lean protein, and roasted vegetables for a filling muscle-building meal.",
+    "img_name": "images/quinoa bowl.jpg"
+  },
+  {
+    "_id": 4,
+    "title": "Protein Shake",
+    "category": "Snack",
+    "goal": "Maintain",
+    "calories": "250",
+    "protein": "30g",
+    "description": "A simple shake with banana for easy protein and fast recovery.",
+    "img_name": "images/protien shake.jpg"
+  },
+  {
+    "_id": 5,
+    "title": "Egg Toast Plate",
+    "category": "Breakfast",
+    "goal": "Maintain",
+    "calories": "410",
+    "protein": "22g",
+    "description": "Eggs, whole grain toast, and fruit for a balanced start to the day.",
+    "img_name": "images/eggs.jpg"
+  },
+  {
+    "_id": 6,
+    "title": "Salmon Rice Bowl",
+    "category": "Lunch",
+    "goal": "Weight Gain",
+    "calories": "640",
+    "protein": "40g",
+    "description": "Salmon, rice, and greens for healthy fats, carbs, and protein.",
+    "img_name": "images/salmon bowl.jpg"
+  },
+  {
+    "_id": 7,
+    "title": "Turkey Sandwich",
+    "category": "Lunch",
+    "goal": "Weight Loss",
+    "calories": "390",
+    "protein": "29g",
+    "description": "Turkey, lettuce, tomato, and light sauce on whole grain bread.",
+    "img_name": "images/turkey sandwich.jpg"
+  },
+  {
+    "_id": 8,
+    "title": "Cottage Cheese Snack Plate",
+    "category": "Snack",
+    "goal": "Weight Loss",
+    "calories": "210",
+    "protein": "20g",
+    "description": "Cottage cheese with fruit for a light snack that still keeps you full.",
+    "img_name": "images/cottage cheese.jpg"
+  }
+]
