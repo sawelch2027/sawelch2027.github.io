@@ -228,7 +228,7 @@ async function loadNutritionItems() {
       card.innerHTML = `
         <img src="${item.img_name}" alt="${item.title}">
         <div class="menu-text">
-          <h3>${item.category}: ${item.title}</h3>
+          <h3>${item.title}</h3>
           <p>${item.description}</p>
           <p><strong>Goal:</strong> ${item.goal}</p>
           <p><strong>Calories:</strong> ${item.calories}</p>
