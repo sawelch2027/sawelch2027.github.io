@@ -243,3 +243,50 @@ async function loadNutritionItems() {
     console.log(error);
   }
 }
+function toggleMenu() {
+  const nav = document.getElementById("nav-menu");
+  if (!nav) return;
+  nav.classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupContactForm();
+});
+
+function setupContactForm() {
+  const form = document.getElementById("contact-form");
+  const formMessage = document.getElementById("form-message");
+
+  if (!form || !formMessage) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    formMessage.textContent = "";
+    formMessage.className = "form-message";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xaqpqyvw", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        formMessage.textContent = "Message sent successfully!";
+        formMessage.classList.add("success");
+        form.reset();
+      } else {
+        formMessage.textContent = "There was an error sending your message.";
+        formMessage.classList.add("error");
+      }
+    } catch (error) {
+      formMessage.textContent = "There was an error sending your message.";
+      formMessage.classList.add("error");
+    }
+  });
+}
