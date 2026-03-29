@@ -145,6 +145,52 @@ footer{
   font-size: 13px;
 }
 
+.project-links-box {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.project-links-box h2 {
+  font-size: 2rem;
+  color: #143a5a;
+  margin-bottom: 12px;
+}
+
+.project-links-box p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin-bottom: 24px;
+}
+
+.project-link-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-link-btn {
+  text-decoration: none;
+  background: #1f5f95;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.project-link-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.project-link-btn.dark {
+  background: #0f172a;
+}
+
 @media (max-width: 768px){
   body{
     padding: 18px 12px 30px 12px;
