@@ -146,22 +146,26 @@ footer{
 }
 
 .project-links-box {
-  background: white;
+  background: #1a2540;
+  border: 2px solid #2a3a63;
   border-radius: 18px;
-  padding: 35px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
   text-align: center;
+  margin-top: 16px;
 }
 
+
 .project-links-box h2 {
+  max-width: 100%;
+  margin: 0 0 12px 0;
   font-size: 2rem;
-  color: #143a5a;
-  margin-bottom: 12px;
+  color: #ffffff;
 }
 
 .project-links-box p {
   font-size: 1.05rem;
-  color: #4a5568;
+  color: #d1dcf6;
   margin-bottom: 24px;
 }
 
@@ -180,11 +184,13 @@ footer{
   border-radius: 999px;
   font-weight: 700;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .project-link-btn:hover {
   transform: translateY(-2px);
   opacity: 0.92;
+  text-decoration: none;
 }
 
 .project-link-btn.dark {
@@ -212,5 +218,26 @@ footer{
   #assign1 img, #assign2 img, #assign3 img, #assign4 img, #assign5 img, #assign6 img, #assign7 img, #assign8 img, #assign9 img, #assign10 img,
   #project1 img, #project2 img, #project3 img, #project4 img, #project5 img, #project6 img, #project7 img{
     height: 170px;
+  }
+
+  .project-links-box {
+    padding: 20px;
+  }
+
+  .project-links-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-links-box p {
+    font-size: 0.98rem;
+  }
+
+  .project-link-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-link-btn {
+    text-align: center;
   }
 }
